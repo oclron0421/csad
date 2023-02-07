@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if($_SESSION['username'] == "") {
+    header("Location: login_noLogin.php");
+}
+?>
 <?php
     $db = mysqli_connect("localhost", "root", "", "review");
     if(isset($_GET['submit'])){
@@ -200,19 +206,18 @@
 		</div>
 	</div>
 	
-	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+        <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Book a Table</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+					<h2>Upload a review </h2>
+					<p>Share your wonderful food stories with others, lets spread the love for food with one another!</p>
+					<p><a href="contact.php" class="btn btn-primary btn-outline">Upload now!</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
 			<div class="row row-pb-md">

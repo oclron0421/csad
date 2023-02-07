@@ -1,4 +1,10 @@
 <!DOCTYPE HTML>
+<?php 
+session_start();
+if($_SESSION['username'] == "") {
+    header("Location: login_noLogin.php");
+}
+?>
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -143,10 +149,10 @@
 							<div class="timeline-badge"><i class="icon-genius"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Create A Restaurant</h3>
+									<h3 class="timeline-title">UI UX check</h3>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>Ironed out the front end of the app.</p>
 								</div>
 							</div>
 						</li>
@@ -154,10 +160,10 @@
 							<div class="timeline-badge"><i class="icon-genius"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Added 200+ Employees</h3>
+									<h3 class="timeline-title">Finalisation</h3>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>Finished backend and here you have the app</p>
 								</div>
 							</div>
 						</li>
@@ -209,14 +215,14 @@
 	</div>
 
 	
-	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/lewjunwei.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Book a Table</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+					<h2>Upload a review </h2>
+					<p>Share your wonderful food stories with others, lets spread the love for food with one another!</p>
+					<p><a href="contact.php" class="btn btn-primary btn-outline">Upload now!</a></p>
 				</div>
 			</div>
 		</div>

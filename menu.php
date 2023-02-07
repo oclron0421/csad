@@ -1,4 +1,10 @@
 <!DOCTYPE HTML>
+<?php 
+session_start();
+if($_SESSION['username'] == "") {
+    header("Location: login_noLogin.php");
+}
+?>
 <html>
 	<head>
 	<meta charset="utf-8">

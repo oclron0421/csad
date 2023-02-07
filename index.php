@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <?php 
 session_start();
-if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header("Location: login.php");
-    exit();
+if($_SESSION['username'] == "") {
+    header("Location: login_noLogin.php");
 }
 ?>
 
@@ -325,7 +324,18 @@ if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 			</div>
 		</div>
 	</div>
-	
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Learn more about us </h2>
+					<p>Learn more about our history of the app and our team.</p>
+					<p><a href="about.php" class="btn btn-primary btn-outline">About page</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">

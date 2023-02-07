@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <?php 
 session_start();
-if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    header("Location: login.php");
-    exit();
+if($_SESSION['username'] == "") {
+    header("Location: login_noLogin.php");
 }
 ?>
 <html>
@@ -268,5 +267,3 @@ if(!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
                 <script src="putPhoto.js"></script>
                 </body>
                 </html>
-
->>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
