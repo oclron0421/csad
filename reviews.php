@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if($_SESSION['username'] == "") {
+    header("Location: login_noLogin.php");
+}
+?>
 <?php
     $db = mysqli_connect("localhost", "root", "", "review");
     if(isset($_GET['submit'])){

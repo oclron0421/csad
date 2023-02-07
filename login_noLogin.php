@@ -1,9 +1,18 @@
 <!DOCTYPE HTML>
 
+<?php 
+$email = "";
+$password = "";
+if(isset($_COOKIE["email"])) {
+    $email = $_COOKIE["email"];
+}
+if(isset($_COOKIE["password"])) {
+    $password = $_COOKIE["password"];
+}
+?>
 <html>
 	<head>
-        <script src="formValidation.js"></script>   
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.1/jsencrypt.min.js"></script>
+        <script src="formValidation.js"></script>  
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
@@ -78,7 +87,7 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li><a href="reviews.php">Reviews</a></li>
+                                                        <li><a href="reviews.php">Reviews</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
                                                         <li class="active"><a href="login.php">Login/SignUp</a></li>
@@ -99,53 +108,51 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Sign Up</h2>
+					<h2>Login</h2>
 					<div class="row">
 
 					</div>
 				</div>
 				
 				<div class="^">
-                                    <form action="registerAccount.php" method="POST" onsubmit="return validateForm();" name="form" id="form-wrap">
-						<div class="row form-group">
-                                                    <div class="col-md-12">
-                                                                    <label for="email">Email</label>
-                                                                    <span id="email_error" style="color:red;"></span>
-                                                                    <input type="text" class="form-control" id="email">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                                    <label for="username">Username</label>
-                                                                    <span id="username_error" style="color:red;"></span>
-                                                                    <input type="text" class="form-control" id="username">
-                                                    </div>
+                                    				<div style="font-size:30pt;color:white">Account required</div>
 
-                                                            <div class="col-md-12">
-                                                                    <label for="password">Password</label>
-                                                                    <span id="password_error" style="color:red;"></span>
-                                                                    <input type="password" class="form-control" id="password">
-                                                            </div>       
-                                                            <div class="col-md-12">
-                                                                    <label for="password_confirm">Confirm Password</label>
-                                                                    <span id="password_confirm_error" style="color:red;"></span>
-                                                                    <input type="password" class="form-control" id="password_confirm">
-                                                                    <input type="hidden" id="name_s" name="name_s">
-                                                                    <input type="hidden" id="email_s" name="email_s">
-                                                                    <input type="hidden" id="encrypt" name="encrypt">
-                                                            </div> 
-                                                </div>
-                                                    <div class="row form-group">
-                                                            <div class="col-md-12">
-                                                                    <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
-                                                            </div>
-                                                        <div>
-                                                            &nbsp;&nbsp;&nbsp;Already have an account? <u><a href="login.php">Login here!</a></a></u>
-                                                        </div>
+					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="email">Email</label>
+                                                                <span id="name_error" style="color:red;margin-left:1.25em;"></span>
+                                                              <?php echo' <input type="text" class="form-control" name="email" id="email" value='.$email.' >'?>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="password">Password</label>
+                                                                <span id="password_error" style="color:red;margin-left:1.25em;"></span>
+								<?php echo '<input type="password" class="form-control" name="password" id="password" value='.$password.'>'?>
+							</div>
+                                                    
+						</div>
+                                            <input style="margin-bottom: 20pt" type="checkbox" id="remember" name="remember" value="checked"> Remember Password?
+                            
+						<div class="row form-group">
+							<div class="col-md-12">
+								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form"> 
+							</div>
+                                                    <div>
+                                                        &nbsp;&nbsp;&nbsp;Don't have an account yet? <u><a href="register.php">Sign Up here!</a></a></u> <br/>
+                                                        &nbsp;&nbsp;&nbsp;Forgot your password? <u><a href="reset_password.php">Reset here</a></a></u>
                                                     </div>
-                                               	
+						</div>
 					</form>
-                            </div>
-                    </div>
-            </div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
 	
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
