@@ -123,15 +123,7 @@ function guidv4($data = null) {
 						<ul>
 							<li><a href="index.php">Home</a></li>
 							<li><a href="menu.php">Menu</a></li>
-							<li class="has-dropdown">
-								<a href="reviews.php">Gallery</a>
-								<ul class="dropdown">
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Food</a></li>
-									<li><a href="#">Coffees</a></li>
-								</ul>
-							</li>
-							<li class="active"><a href="login.php">Reservation</a></li>
+							<li><a href="reviews.php">Reviews</a></li>							<li class="active"><a href="login.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Contact</a></li>
 						</ul>

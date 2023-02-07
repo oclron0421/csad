@@ -94,15 +94,7 @@ if($_SESSION['username'] == "") {
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li class="has-dropdown active">
-								<a href="reviews.php">Reviews</a>
-								<ul class="dropdown">
-									<li><a href="#">Restaurants</a></li>
-									<li><a href="#">Cafes</a></li>
-									<li><a href="#">Bars</a></li>
-                                                                        <li><a href="#">Hawker stalls</a></li>
-								</ul>
-							</li>
+							<li class="active"><a  href="reviews.php">Reviews</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
                                                         <li><a href="login.php">Login/SignUp</a></li>
@@ -154,15 +146,19 @@ if($_SESSION['username'] == "") {
                         ?>
                         <div class="card">
                             <div class="image">
-                                <img src="img/<?php echo $row["image"]; ?>" alt="">
+                                <img src="images/<?php echo $row["image"]; ?>" alt="">
                             </div>
                             <div class="caption">
                                 <p class="rate">
+                                    <?php
+                                    $rating = $row["rating"];
+                                    for($i=0; $i<$rating; $i++)
+                                    {
+                                    ?>
                                     <img src="images/star1.png">
-                                    <img src="images/star1.png">
-                                    <img src="images/star1.png">
-                                    <img src="images/star1.png">
-                                    <img src="images/star1.png">
+                                    <?php
+                                    }
+                                    ?>
                                 </p><!-- comment -->
                                 <p class="food_name">Food name:
                                 <?php echo $row["foodname"];  ?>
@@ -180,9 +176,7 @@ if($_SESSION['username'] == "") {
                        
                     </main>
                             
-                            <div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_9.jpeg);" data-trigger="zoomerang"></div>
-				</div>
+                        
 			</div>
 		</div>
 	</div>

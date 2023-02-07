@@ -83,15 +83,7 @@ if($_SESSION['username'] == "") {
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li class="has-dropdown">
-								<a href="reviews.php">Reviews</a>
-								<ul class="dropdown">
-									<li><a href="#">Restaurants</a></li>
-									<li><a href="#">Cafes</a></li>
-									<li><a href="#">Bars</a></li>
-                                                                        <li><a href="#">Hawker stalls</a></li>
-								</ul>
-							</li>
+							<li><a href="reviews.php">Reviews</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
                                                         <li class="active"><a href="login.php">Login/SignUp</a></li>
