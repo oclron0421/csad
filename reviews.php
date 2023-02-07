@@ -129,7 +129,7 @@ if($_SESSION['username'] == "") {
 	</header>
 
 	
-	<div id="fh5co-gallery" class="fh5co-section">
+	<div id="fh5co-slider" class="fh5co-section animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
@@ -138,43 +138,45 @@ if($_SESSION['username'] == "") {
 						<div class="col-md-6">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
 						</div>
+                                            <main>
+                                                <?php
+                                                if($result && $result->num_rows > 0){ 
+                                                    while($row = mysqli_fetch_assoc($result)){
+                                                ?>
+                                                <div class="card">
+                                                    <div class="image">
+                                                        <img src="images/<?php echo $row["image"]; ?>" alt="">
+                                                    </div>
+                                                    <div class="caption">
+                                                        <p class="rate">
+                                                            <?php
+                                                            $rating = $row["rating"];
+                                                            for($i=0; $i<$rating; $i++)
+                                                            {
+                                                            ?>
+                                                            <img src="images/star1.png">
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        <!-- comment -->
+                                                        <p class="food_name">Food name:
+                                                        <?php echo $row["foodname"];  ?>
+                                                        </br></br>Location: <?php echo $row["location"];  ?>
+                                                        </br></br>Description:
+                                                        </br><?php echo $row["description"]; ?>
+                                                    </div> 
+                                                </div>
+                                                <?php
+                                                    }
+                                                }
+                                                mysqli_close($db);
+                                                ?>
+
+                                            </main>
 					</div>
+                                     
 				</div>
-                    <main>
-                        <?php
-                        if($result && $result->num_rows > 0){ 
-                            while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                        <div class="card">
-                            <div class="image">
-                                <img src="images/<?php echo $row["image"]; ?>" alt="">
-                            </div>
-                            <div class="caption">
-                                <p class="rate">
-                                    <?php
-                                    $rating = $row["rating"];
-                                    for($i=0; $i<$rating; $i++)
-                                    {
-                                    ?>
-                                    <img src="images/star1.png">
-                                    <?php
-                                    }
-                                    ?>
-                                <!-- comment -->
-                                <p class="food_name">Food name:
-                                <?php echo $row["foodname"];  ?>
-                                </br></br>Location: <?php echo $row["location"];  ?>
-                                </br></br>Description:
-                                </br><?php echo $row["description"]; ?>
-                            </div> 
-                        </div>
-                        <?php
-                            }
-                        }
-                        mysqli_close($db);
-                        ?>
-                       
-                    </main>
+                                    
                             
                         
 			</div>

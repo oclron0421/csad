@@ -1,11 +1,17 @@
-<!DOCTYPE HTML>
+
 <?php 
 session_start();
 if($_SESSION['username'] == "") {
     header("Location: login_noLogin.php");
 }
 ?>
+<?php
+    $db1 = mysqli_connect("localhost", "root", "", "review");
+    $result1 = mysqli_query($db1, "SELECT * FROM food_review WHERE rating=5");
+   
+?>
 
+<!DOCTYPE HTML>
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -128,8 +134,6 @@ if($_SESSION['username'] == "") {
 	</div>
         <!-- dynamic announcements can go here -->
 	<div id="fh5co-featured-menu" class="fh5co-section">
-		<div class="container">
-			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
 					<h2>Today's Hot Deals!</h2>
 
@@ -188,84 +192,60 @@ if($_SESSION['username'] == "") {
 		</div>
 	</div>
 
-	<div id="fh5co-slider" class="fh5co-section animate-box">
+<div id="fh5co-slider" class="fh5co-section animate-box">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="fh5co-heading">
-                                            <h2>Top Reviews for the week!</h2>
-						<p>These are the highest rated reviews for the week. Reviewed by our top reviewers! </p>
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Our Reviews</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+						</div>
+                                            <main>
+                                                <?php
+                                                if($result1 && $result1->num_rows > 0){ 
+                                                    while($row1 = mysqli_fetch_assoc($result1)){
+                                                ?>
+                                                <div class="card">
+                                                    <div class="image">
+                                                        <img src="images/<?php echo $row1["image"]; ?>" alt="">
+                                                    </div>
+                                                    <div class="caption">
+                                                        <p class="rate">
+                                                            <?php
+                                                            $rating1 = $row1["rating"];
+                                                            for($i=0; $i<$rating1; $i++)
+                                                            {
+                                                            ?>
+                                                            <img src="images/star1.png">
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        <!-- comment -->
+                                                        <p class="food_name">Food name:
+                                                        <?php echo $row1["foodname"];  ?>
+                                                        </br></br>Location: <?php echo $row1["location"];  ?>
+                                                        </br></br>Description:
+                                                        </br><?php echo $row1["description"]; ?>
+                                                    </div> 
+                                                </div>
+                                                <?php
+                                                    }
+                                                }
+                                                mysqli_close($db1);
+                                                ?>
+
+                                            </main>
 					</div>
-                                    <!-- can put the top reviews over here, just change the values and the labels -->
+                                     
 				</div>
-				<div class="col-md-6 col-md-push-1 animate-box">
-					<aside id="fh5co-slider-wrwap">
-					<div class="flexslider">
-						<ul class="slides">
-					   	<li style="background-image: url(images/gallery_7.jpeg);">
-					   		<div class="overlay-gradient"></div>
-					   		<div class="container-fluid">
-					   			<div class="row">
-						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-						   				<div class="slider-text-inner">
-						   					<div class="desc">
-													<h2>Crab <em>with</em> Curry Sources</h2>
-                                                                                                        <p><!-- Put the description here -->The curry is very fragrant, it is rather authentic and reminded me of my time in India</p>
-                                                                                                        
-                                                                                                        <p>Location: Hogwarts school of witchcraft and wizardry <br> 
-                                                                                                           Author: Harry Potter </p>
-                                                                                                       
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
-						   					</div>
-						   				</div>
-						   			</div>
-						   		</div>
-					   		</div>
-					   	</li>
-					   	<li style="background-image: url(images/gallery_6.jpeg);">
-					   		<div class="overlay-gradient"></div>
-					   		<div class="container-fluid">
-					   			<div class="row">
-						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-						   				<div class="slider-text-inner">
-						   					<div class="desc">
-													<h2>Tuna <em>&amp;</em> Roast Beef</h2>
-													<p><!-- Put the description here -->The beef is very delectable, tuna is very fresh. The two might not seem like a good combination, but trust me it is!</p>
-                                                                                                        
-                                                                                                        <p> Location: The moon <br>
-                                                                                                            Author: Neil Armstrong </p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
-						   					</div>
-						   				</div>
-						   			</div>
-						   		</div>
-					   		</div>
-					   	</li>
-					   	<li style="background-image: url(images/gallery_5.jpeg);">
-					   		<div class="overlay-gradient"></div>
-					   		<div class="container-fluid">
-					   			<div class="row">
-						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
-						   				<div class="slider-text-inner">
-						   					<div class="desc">
-													<h2>Egg <em>with</em> Mushroom</h2>
-													<p>The eggs are cooked to perfection, soft and fluffy. Mushrooms are an awesome pairing with the eggs, making this dish a perfect breakfast!</p>
-													<p> Location: Pyramids of Giza <br>
-                                                                                                            Author: Cleopatra </p>
-                                                                                                        <p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
-						   					</div>
-						   				</div>
-						   			</div>
-						   		</div>
-					   		</div>
-					   	</li>		   	
-					  	</ul>
-				  	</div>
-				</aside>
-				</div>
+                                    
+                            
+                        
 			</div>
 		</div>
 	</div>
+	
 <!-- banner can go in here -->
 	<div id="fh5co-blog" class="fh5co-section">
 		<div class="container">
