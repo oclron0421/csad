@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
     $rating = $_POST['rating']; //newly added line for the rating
 
     // check if all fields are filled
+
     if (!empty($foodname) && !empty($location) && !empty($description) && !empty($rating)) { //added check for rating
         $file = $_FILES['image'];
         $fileName = $_FILES['image']['name'];
@@ -34,8 +35,11 @@ if (isset($_POST['submit'])) {
         if (in_array($fileActualExt, $allowed)) {
             if ($fileError === 0) {
                 if ($fileSize < 1000000) {
+                    //$fileNameNew = uniqid(); 
+                    //$fileNameNew .= "." . $fileActualExt;
                     $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-                    $fileDestination = 'uploads/' . $fileNameNew;
+                        
+                    $fileDestination = 'img/' . $fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
                     $stmt = $conn->prepare("INSERT INTO `food_review` (`foodname`, `location`, `image`, `description`, `rating`) VALUES (?, ?, ?, ?, ?)"); //modify the query to include the new column
                     $stmt->bind_param("ssssi", $foodname, $location, $fileDestination, $description, $rating); //modify the types to include an integer for the rating
@@ -51,7 +55,8 @@ if (isset($_POST['submit'])) {
             echo "You cannot upload files of this type!";
         }
     }
+    
 }
 
 $conn->close();
-?>
+

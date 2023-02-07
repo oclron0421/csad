@@ -58,6 +58,14 @@
         <!-- Flexslider  -->
         <link rel="stylesheet" href="css/flexslider.css">
 
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+       
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -67,7 +75,6 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-
 	</head>
 	<body>
 		
@@ -83,7 +90,6 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-
 
 							<li class="active"><a href="index.php">Home</a></li>
 
@@ -149,15 +155,28 @@
 							<div class="col-md-12">
 								<label for="description">Food Description</label>
 								<textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-
-							</div>
+                                                        </div>
 						</div>
                                                 <div class="row form-group">
 							<div class="col-md-12">
+								<label for="rating">How was your experience?</label>
+                                                                <input type="radio" name="rating" id="r1">
+                                                                <label for="r1"></label>
+                                                                <input type="radio" name="rating" id="r2">
+                                                                <label for="r2"></label>
+                                                                <input type="radio" name="rating" id="r3">
+                                                                <label for="r3"></label>
+                                                                <input type="radio" name="rating" id="r4">
+                                                                <label for="r4"></label>
+                                                                <input type="radio" name="rating" id="r5">
+                                                                <label for="r5"></label>
+                                                <div class="row form-group rating-box">
+							<div class="col-md-12">
 								<label for="image">Images</label>
                                                                 <input  type="file" class="form_control" id="image_input" name="image" accept="image/png, image/jpg">
-                                                                <div id="display_image"><div/>
+                                                                <div id="display_image"></div>
 							</div>
+                                                </div>
 						</div><br>
 						<div class="row form-group">
 							<div class="col-md-12">
@@ -167,8 +186,8 @@
                                                 </div>            
 					</form>
 				</div>
-			</div>
-
+                    	</div>
+                    </div>
 		</div>
 	</div>
 
@@ -257,4 +276,3 @@
                 </body>
                 </html>
 
->>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
