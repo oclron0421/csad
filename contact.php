@@ -65,7 +65,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-       
+
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -75,6 +75,7 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
+
 	</head>
 	<body>
 		
@@ -156,30 +157,22 @@
                                                         </div>
 						</div>
                                                 <div class="row form-group">
-							<div class="col-md-12">
-								<label for="rating">How was your experience?</label>
-                                                                <input type="radio" name="rating" id="r1">
-                                                                <label for="r1"></label>
-                                                                <input type="radio" name="rating" id="r2">
-                                                                <label for="r2"></label>
-                                                                <input type="radio" name="rating" id="r3">
-                                                                <label for="r3"></label>
-                                                                <input type="radio" name="rating" id="r4">
-                                                                <label for="r4"></label>
-                                                                <input type="radio" name="rating" id="r5">
-                                                                <label for="r5"></label>
-                                                <div class="row form-group rating-box">
-							<div class="col-md-12">
+						<div class="col-md-12">
+                                                    <label for="rating">How was your experience?</label>
+                                                
+                                                    <input type="number" id="rating" max="5" min="1" />
+                                                </div>
+                                                
+						<div class="col-md-12">
 								<label for="image">Images</label>
                                                                 <input  type="file" class="form_control" id="image_input" name="image" accept="image/png, image/jpg">
-                                                                <div id="display_image"></div>
-							</div>
+                                                        <div id="display_image"></div>
+						</div>
                                                 </div>
 						</div><br>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form" name="submit">
-
 							</div>
                                                 </div>            
 					</form>
@@ -212,11 +205,6 @@
                                                 <li><a href="#">Upload Review</a></li>
 					</ul>
 				</div>
-<<<<<<< HEAD
-=======
-
-
-
 
     
                                 <div class="col-md-4 col-md-push-1 fh5co-widget">
@@ -274,3 +262,4 @@
                 </body>
                 </html>
 
+>>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9

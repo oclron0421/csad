@@ -1,17 +1,32 @@
 <!DOCTYPE HTML>
-<?php 
-$email = "";
-$password = "";
-if(isset($_COOKIE["email"])) {
-    $email = $_COOKIE["email"];
-}
-if(isset($_COOKIE["password"])) {
-    $password = $_COOKIE["password"];
-}
-?>
+
 <html>
 	<head>
-        <script src="formValidation.js"></script>  
+        <script>
+            function validateLogin() {
+                var username = document.getElementById("username").value;
+                var email = document.getElementById("email").value;
+                document.getElementById("username_error").innerHTML = "";
+                document.getElementById("email_error").innerHTML = "";
+                var can_submit = true;
+                if (username == '') {
+                    document.getElementById("username_error").innerHTML = "  Name cannot be empty";
+                    can_submit = false;
+                }
+                if (email == '') {
+                    document.getElementById("email_error").innerHTML = "  Email cannot be empty";
+                    can_submit = false;
+                }
+                if (can_submit) {
+                    document.form.name_s.value = username;
+                    document.form.email_s.value = email;
+                return true;
+                }
+                else {
+                return false;
+                }
+            }
+        </script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
@@ -86,7 +101,15 @@ if(isset($_COOKIE["password"])) {
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-                                                        <li><a href="reviews.php">Reviews</a></li>
+							<li class="has-dropdown">
+								<a href="reviews.php">Reviews</a>
+								<ul class="dropdown">
+									<li><a href="#">Restaurants</a></li>
+									<li><a href="#">Cafes</a></li>
+									<li><a href="#">Bars</a></li>
+                                                                        <li><a href="#">Hawker stalls</a></li>
+								</ul>
+							</li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
                                                         <li class="active"><a href="login.php">Login/SignUp</a></li>
@@ -103,49 +126,8 @@ if(isset($_COOKIE["password"])) {
 	</header>
 
 	
-	<div id="fh5co-reservation-form" class="fh5co-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Login</h2>
-					<div class="row">
+	<div class="fh5co-section" style='font-size:40pt; text-align:center'> Your password has been reset. </div>
 
-					</div>
-				</div>
-				
-				<div class="^">
-					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="email">Email</label>
-                                                                <span id="name_error" style="color:red;margin-left:1.25em;"></span>
-                                                              <?php echo' <input type="text" class="form-control" name="email" id="email" value='.$email.' >'?>
-							</div>
-						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="password">Password</label>
-                                                                <span id="password_error" style="color:red;margin-left:1.25em;"></span>
-								<?php echo '<input type="password" class="form-control" name="password" id="password" value='.$password.'>'?>
-							</div>
-                                                    
-						</div>
-                                            <input style="margin-bottom: 20pt" type="checkbox" id="remember" name="remember" value="checked"> Remember Password?
-                            
-						<div class="row form-group">
-							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form"> 
-							</div>
-                                                    <div>
-                                                        &nbsp;&nbsp;&nbsp;Don't have an account yet? <u><a href="register.php">Sign Up here!</a></a></u> <br/>
-                                                        &nbsp;&nbsp;&nbsp;Forgot your password? <u><a href="reset_password.php">Reset here</a></a></u>
-                                                    </div>
-						</div>
-					</form>
-				</div>	
-			</div>
-		</div>
-	</div>
 
 	
 	
