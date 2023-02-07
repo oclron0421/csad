@@ -70,23 +70,23 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">FoodGasm<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="menu.html">Menu</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.html">Gallery</a>
+								<a href="reviews.php">Gallery</a>
 								<ul class="dropdown">
 									<li><a href="#">Events</a></li>
 									<li><a href="#">Food</a></li>
 									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
-							<li class="active"><a href="login.html">Reservation</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li class="active"><a href="login.php">Reservation</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Reservation</h2>
+					<h2>Sign Up</h2>
 					<div class="row">
 
 					</div>
@@ -113,30 +113,34 @@
 				<div class="^">
 					<form action="#" id="form-wrap">
 						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="name">Email/Username</label>
-								<input type="text" class="form-control" id="name">
-							</div>
-						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="many">Password</label>
-								<input type="text" class="form-control" id="name">
-							</div>
-						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
-							</div>
-						</div>
+                                                    <div class="col-md-12">
+                                                                    <label for="name">Email</label>
+                                                                    <input type="text" class="form-control" id="name">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                                    <label for="name">Username</label>
+                                                                    <input type="text" class="form-control" id="name">
+                                                    </div>
 
+                                                            <div class="col-md-12">
+                                                                    <label for="many">Password</label>
+                                                                    <input type="password" class="form-control" id="name">
+                                                            </div>       
+                                                            <div class="col-md-12">
+                                                                    <label for="many">Confirm Password</label>
+                                                                    <input type="password" class="form-control" id="name">
+                                                            </div> 
+                                                </div>
+                                                    <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                    <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+                                                            </div>
+                                                    </div>
+                                               	
 					</form>
-				</div>
-				
-				
-			</div>
-		</div>
-	</div>
+                            </div>
+                    </div>
+            </div>
 
 	
 	
