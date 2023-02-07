@@ -1,5 +1,5 @@
 <?php
-$name = $_POST["username"];
+$email = $_POST["email"];
 $password = $_POST["password"];
 $name_found = false;
 $user_index;
@@ -23,7 +23,7 @@ $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
         $data_keys = array_keys($data);
         for ($i = 0; $i < $count ; $i++)
         {
-            if ($data[$i]["username"] == $name) {
+            if ($data[$i]["email"] == $email) {
                 $name_found = true;
                 $user_index = $i;
                 break;
@@ -32,16 +32,25 @@ $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
         if (!$name_found) {
             header('Location:login_username_not_found.php');
         }
+        else {
         if (password_verify($password, $data[$user_index]["password"]))  {
             session_start();
             $_SESSION['username'] = $data[$user_index]["username"];
             $_SESSION['email'] = $data[$user_index]["email"];
             $_SESSION['password'] = $data[$user_index]["password"];
+            $_username = $data[$user_index]["username"];
+            $_email = $data[$user_index]["email"];
+            if ($_POST["remember"] == "checked") {
+            setcookie("username", $_username, time() + (86400 * 30), "/" );
+            setcookie("email", $_email, time() + (86400 * 30), "/" );
+            setcookie("password", $password, time() + (86400 * 30), "/" );
+            }
             header('Location:login_success.php');
         }   
         else {
             header('Location:login_password_invalid.php');
         }    
+        }
         
 //        var_dump($data[$data_keys[0]]);
 //        var_dump($data[$data_keys[0]]["password"]);
