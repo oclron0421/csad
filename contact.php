@@ -67,8 +67,7 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-<<<<<<< HEAD
-=======
+
 	</head>
 	<body>
 		
@@ -84,7 +83,6 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
->>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
 
 
 							<li class="active"><a href="index.php">Home</a></li>

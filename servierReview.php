@@ -1,5 +1,4 @@
 <?php
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -17,9 +16,10 @@ if (isset($_POST['submit'])) {
     $foodname = $_POST['foodname'];
     $location = $_POST['location'];
     $description = $_POST['description'];
+    $rating = $_POST['rating']; //newly added line for the rating
 
     // check if all fields are filled
-    if (!empty($foodname) && !empty($location) && !empty($description)) {
+    if (!empty($foodname) && !empty($location) && !empty($description) && !empty($rating)) { //added check for rating
         $file = $_FILES['image'];
         $fileName = $_FILES['image']['name'];
         $fileTmpName = $_FILES['image']['tmp_name'];
@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
                     $fileNameNew = uniqid('', true) . "." . $fileActualExt;
                     $fileDestination = 'uploads/' . $fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    $stmt = $conn->prepare("INSERT INTO `food_review` (`foodname`, `location`, `image`, `description`) VALUES (?, ?, ?, ?)");
-                    $stmt->bind_param("ssss", $foodname, $location, $fileDestination, $description);
+                    $stmt = $conn->prepare("INSERT INTO `food_review` (`foodname`, `location`, `image`, `description`, `rating`) VALUES (?, ?, ?, ?, ?)"); //modify the query to include the new column
+                    $stmt->bind_param("ssssi", $foodname, $location, $fileDestination, $description, $rating); //modify the types to include an integer for the rating
                     $stmt->execute();
                     header("Location: contact.php?uploadsuccess");
                 } else {
