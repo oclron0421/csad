@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <script src="formValidation.js"></script>  
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
@@ -8,16 +9,6 @@
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="freehtml5.co" />
-        
-        <style>
-            #display_image{
-                width: 375px;
-                height: 211px;
-                border: 1px  solid white;
-                background-size: cover;
-                
-            }
-        </style>
 
 	<!-- 
 	//////////////////////////////////////////////////////
@@ -56,6 +47,8 @@
 
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Date Time -->
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
@@ -82,18 +75,19 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="index.php">Home</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.php">Reviews</a>
+								<a href="reviews.html">Gallery</a>
 								<ul class="dropdown">
-									<li><a href="#">Restaurants</a></li>
-									<li><a href="#">Cafes</a></li>
-									<li><a href="#">Bars</a></li>
-                                                                        <li><a href="#">Hawker stalls</a></li>
+									<li><a href="#">Events</a></li>
+									<li><a href="#">Food</a></li>
+									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
+							<li class="active"><a href="login.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="contact.php">Upload Review</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -102,95 +96,69 @@
 		<!-- </div> -->
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>Get <em>in</em> Touch</h1>
-							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	<header >
+		
 	</header>
 
 	
-	<div id="fh5co-contact" class="fh5co-section animate-box">
+	<div id="fh5co-reservation-form" class="fh5co-section">
 		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Add a review</h2>
-					<p>If you'd like to share your opinion on food, please fill up the form below to share your love for food with others!</p>
-		
-				</div>
-			</div>
-			
 			<div class="row">
-				<div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6">
-					<form action="#" id="form-wrap">
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Reservation</h2>
+					<div class="row">
+
+					</div>
+				</div>
+                            <div style="font-size:30pt;color:white">Invalid Password</div>
+				<div class="^">
+					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="name">Food</label>
-								<input name="name" type="text" class="form-control" id="name">
+								<label for="username">Username</label>
+                                                                <span id="name_error" style="color:red;margin-left:1.25em;"></span>
+								<input type="text" class="form-control" name="username" id="username">
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="email">Location</label>
-								<input name="location" id="location" type="text" class="form-control">
+								<label for="password">Password</label>
+                                                                <span id="password_error" style="color:red;margin-left:1.25em;"></span>
+								<input type="password" class="form-control" name="password" id="password">
 							</div>
 						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="description">Food Description</label>
-								<textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-							</div>
-						</div>
-                                                <div class="row form-group">
-							<div class="col-md-12">
-								<label for="image">Images</label>
-                                                                <input  type="file" class="form_control" id="image_input" name="image_input" accept="image/png, image/jpg">
-                                                                <div id="display_image"><div/>
-							</div>
-						</div><br>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
 							</div>
-                                                </div>
-                                                            
+						</div>
 
 					</form>
 				</div>
+				
+				
 			</div>
-
 		</div>
 	</div>
 
+	
+	
+	
+	
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
-					<h4>Foodgasm</h4>
-					<p>Done By: Ron Ong <br>
-                                                    Wong Du Yuan <br>
-                                                    Lew Jun Wei <br>
-                                                    Lucas Koh <br>
-                                            Created with a free bootstrap template. Available at: https://themewagon.com/themes/free-bootstrap-templates-food-restaurant-cafe-websites-design/ <br>
-                                            Special thanks to Mr James Yee for teaching us CSAD module for this semester!
-                                            </p>
+					<h4>Tasty</h4>
+					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
 				</div>
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">Blog</a></li>
 						<li><a href="#">About</a></li>
+						<li><a href="#">Menu</a></li>
+						<li><a href="#">Gallery</a></li>
 					</ul>
 				</div>
 
@@ -254,9 +222,15 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Main -->   
+
+	<!-- Date Time -->
+	<script src="js/moment.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	
+
+	<!-- Main -->
 	<script src="js/main.js"></script>
-        <script src="js/putPhoto.js"></script>
+
 	</body>
 </html>
 

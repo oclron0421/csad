@@ -1,4 +1,49 @@
-<!DOCTYPE HTML>
+<?php
+include ('Crypt/RSA.php');
+$rsa = new Crypt_RSA();
+$rsa->setEncryptionMode(CRYPT_RSA_ENCRYPTION_PKCS1);
+$rsa->loadKey("MIICXAIBAAKBgQDmLv6TyOEeXcYEt5uePwSsql7GcPGqxhD9ot8LjzS6NPM3OeDy wez0TIsmvznrKMoTV0rDvLAceuL7a+S+dEEpPMrMFmcMLcMQ7iLXSQBo7ZaMVJT+ pHHxZuwkMxJIIhp9cTVC8ieAMTwNwzq44zYG6X/cA/VBONc/FRtAN7UfNQIDAQAB AoGAFa8lU2BlTgTbzn5KKNkF7zV+Mn0u/v1Or3N5m0Sqh8TM3rh98lCGKn4leQkj Ayi3X1AQs9TMKxABNFnggCKX2rAMT/mQ7afcPEzdrrvd0y2EY0tpiRuE9MjFYMka Fo5aENs8rHZBQ0oL7cEjZXwqF6cE3WQzr7KjX11kaXWwQIcCQQDpuNFhqEK2uPj8 jw3oWh3LUOU0+AeoU1aF7+xpnmqlPAjxgRE6jYSS87ZFcgsRQUeD9HpErhTmHEr4 EWhUwoYjAkEA/B/VrrraNkEeRtgzRWI58HEdxV7z290h6kKDW7oNceV2A3q8WkD0 evdAMSSPn7s+KlTNqG1qTOUDWtL6HKpexwJBAOibD4dptju0C9kPZoAAb/aRJAx7 bOORTWMvTNIw32JjRWNVWJg1j+PQuW6T+X/KwCoLfkQsHJCHR/VrHbJ9hpECQFiM MbcJRuQxIJoPCoq+wcyRXbxY6dp5IpUswQexI1GyHi2AqLAmCfc56SCZT5vw3hdt 60DRFLlm4TO/zznMGDcCQHMG7XzAVuqSlDva3BetRhyYLw+nHH7qHrYhOrCLOWUq j8q33KSmAF2hSJq3nQbhe94H5nBMm3SJ9pcIN+/YHaA=");
+$password = $rsa->decrypt(base64_decode($_POST["encrypt"]));
+register_user($_POST["name_s"], password_hash($password, PASSWORD_DEFAULT), $_POST["email_s"]);
+
+function register_user($username, $password, $email) {
+    $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
+    $ASTRA_DB_REGION = "asia-south1";
+    $ASTRA_DB_KEYSPACE= "food";
+    $ASTRA_DB_TABLE = "users";
+    $ASTRA_DB_APPLICATION_TOKEN= "AstraCS:IlZfzQfrWWXCSZUcsZbHQGTl:34582d72acfc2bd1bfe1fa4e70d41f153b2dc1ddd097feadb6c049ece41fcb1e";
+    $URL = "https://" . "$ASTRA_DB_ID" . "-" . "$ASTRA_DB_REGION" . ".apps.astra.datastax.com/api/rest/v2/keyspaces/" . "$ASTRA_DB_KEYSPACE" . "/" . "$ASTRA_DB_TABLE";
+    $HEADER = array('accept: application/json', 'x-cassandra-token: '."$ASTRA_DB_APPLICATION_TOKEN",'content-type: application/json');
+    $UUID = guidv4();
+    $POST = array('id' => "$UUID", 'email' => "$email", 'password' => "$password", 'username' => "$username" );
+    $session = curl_init();
+    curl_setopt($session, CURLOPT_URL, $URL);
+    curl_setopt($session, CURLOPT_POST, true);
+    curl_setopt($session,CURLOPT_RETURNTRANSFER,true);
+    curl_setopt($session,CURLOPT_HTTPHEADER, $HEADER); 
+    curl_setopt($session, CURLOPT_POSTFIELDS, json_encode($POST));
+    
+    try {
+        $result = curl_exec($session);
+    } catch (RuntimeException $ex) {
+        die(sprint('Http error %s with code %d', $ex->getMessage(), $ex->getCode()));
+    }
+}
+
+function guidv4($data = null) {
+    // Generate 16 bytes (128 bits) of random data or use the data passed into the function.
+    $data = $data ?? random_bytes(16);
+    assert(strlen($data) == 16);
+
+    // Set version to 0100
+    $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
+    // Set bits 6-7 to 10
+    $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
+
+    // Output the 36 character UUID.
+    return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+}
+?>
 <html>
 	<head>
         <script src="formValidation.js"></script>   
@@ -113,6 +158,7 @@
 				</div>
 				
 				<div class="^">
+                                    <div style="font-size:40;color:white;"> Account has been created </div>
                                     <form action="registerAccount.php" method="POST" onsubmit="return validateForm();" name="form" id="form-wrap">
 						<div class="row form-group">
                                                     <div class="col-md-12">
@@ -243,4 +289,3 @@
 
 	</body>
 </html>
-
