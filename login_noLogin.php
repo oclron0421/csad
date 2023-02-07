@@ -115,6 +115,8 @@ if(isset($_COOKIE["password"])) {
 				</div>
 				
 				<div class="^">
+                                    				<div style="font-size:30pt;color:white">Account required</div>
+
 					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
 						<div class="row form-group">
 							<div class="col-md-12">

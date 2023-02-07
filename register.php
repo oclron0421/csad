@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
-<?php 
-session_start();
-if($_SESSION['username'] == "") {
-    header("Location: login.php");
-}
-?>
+
 <html>
 	<head>
         <script src="formValidation.js"></script>   
