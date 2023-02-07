@@ -134,8 +134,8 @@
 				</div>
 				
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
-					<div class="fh5co-item">
-						<?php echo"Hello" ?>
+					<div >
+						<?php include 'bannerCode.php'; ?>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
