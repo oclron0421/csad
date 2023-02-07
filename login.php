@@ -1,4 +1,14 @@
 <!DOCTYPE HTML>
+<?php 
+$email = "";
+$password = "";
+if(isset($_COOKIE["email"])) {
+    $email = $_COOKIE["email"];
+}
+if(isset($_COOKIE["password"])) {
+    $password = $_COOKIE["password"];
+}
+?>
 <html>
 	<head>
         <script src="formValidation.js"></script>  
@@ -117,16 +127,19 @@
 							<div class="col-md-12">
 								<label for="email">Email</label>
                                                                 <span id="name_error" style="color:red;margin-left:1.25em;"></span>
-								<input type="text" class="form-control" name="email" id="email">
+                                                              <?php echo' <input type="text" class="form-control" name="email" id="email" value='.$email.' >'?>
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="password">Password</label>
                                                                 <span id="password_error" style="color:red;margin-left:1.25em;"></span>
-								<input type="password" class="form-control" name="password" id="password">
+								<?php echo '<input type="password" class="form-control" name="password" id="password" value='.$password.'>'?>
 							</div>
+                                                    
 						</div>
+                                            <input style="margin-bottom: 20pt" type="checkbox" id="remember" name="remember" value="checked"> Remember Password?
+                            
 						<div class="row form-group">
 							<div class="col-md-12">
 								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form"> 
