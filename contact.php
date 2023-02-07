@@ -160,7 +160,7 @@
 						<div class="col-md-12">
                                                     <label for="rating">How was your experience?</label>
                                                 
-                                                    <input type="number" id="rating" max="5" min="1" />
+                                                    <input style="color:black; font-size: 20px; " type="number" id="rating" name="rating" max="5" min="1" />
                                                 </div>
                                                 
 						<div class="col-md-12">

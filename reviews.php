@@ -170,9 +170,7 @@
                        
                     </main>
                             
-                            <div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_9.jpeg);" data-trigger="zoomerang"></div>
-				</div>
+                        
 			</div>
 		</div>
 	</div>
