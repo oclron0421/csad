@@ -85,10 +85,12 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							<li class="active"><a href="index.php">Home</a></li>
 =======
 							<li ><a href="index.php">Home</a></li>
 >>>>>>> 473d2378a2086dca57c8c8e68d8769929715645d
+
 							<li class="has-dropdown">
 								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
