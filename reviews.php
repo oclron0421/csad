@@ -1,3 +1,15 @@
+<?php
+    $db = mysqli_connect("localhost", "root", "", "review");
+//    if(isset($_GET['submit'])){
+//        $title = $_GET['text'];
+//        $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
+//        $result = mysqli_query($db, $sql)or die("Query Failed");
+//        
+//    }else{
+        $result = mysqli_query($db, "SELECT * FROM food_review");
+    //}
+    //$data = $conn->query($db, $sql);
+?>
 <!DOCTYPE HTML>
 <html>
 	<head> 
@@ -102,10 +114,10 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<h1>See <em>Our</em> Gallery</h1>
-                                                        <div class="boox">
-                                                            <i class="fa fa-search" style="align-items: center;" aria-hidden="true"></i>
-                                                            <input style="color:black; align-items: center; " class="boox" type="text" name="">
-                                                        </div>
+                                                        <form action="search.php" method="get">
+                                                            <p style="color:white">Search:<input type="text" style="width:350px; border-radius: 30px;" name="text" value="">
+                                                            <input style="color: black; border-radius: 20px; "type="submit" name="submit" value="Search">
+                                                        </form>
                                                       
 						</div>
                                                         
@@ -128,12 +140,13 @@
 					</div>
 				</div>
                     <main>
-                        <?php 
-                            for($i=0; $i<10; $i++){
+                        <?php
+                        if($result && $result->num_rows > 0){ 
+                            while($row = mysqli_fetch_assoc($result)){
                         ?>
                         <div class="card">
                             <div class="image">
-                                <img src="images/image.png" alt="">
+                                <img src="<?php echo $row["image"]; ?>" alt="">
                             </div>
                             <div class="caption">
                                 <p class="rate">
@@ -143,14 +156,20 @@
                                     <img src="images/star1.png">
                                     <img src="images/star1.png">
                                 </p><!-- comment -->
-                                <p class="product_name">Food name</p>
-                                <p class="location">Location</p>
-                                <p class="description">Description</p>
+                                <p class="food_name">Food name:
+                                <?php echo $row["foodname"];  ?>
+                                </br></br>Location: <?php echo $row["location"];  ?>
+                                </br></br>Description:
+                                </br><?php echo $row["description"]; ?>
+
                             </div> 
                         </div>
                         <?php
                             }
+                        }
+                        mysqli_close($db);
                         ?>
+                       
                     </main>
                             
                             <div class="col-md-6 col-sm-6 fh5co-gallery_item">
