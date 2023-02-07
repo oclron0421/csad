@@ -209,7 +209,7 @@
 				<div class="col-md-7 animate-box">
 					<blockquote>
 						<p> &ldquo; Meet our team &rdquo;</p>
-						<p class="author"><cite>&mdash; Jane Smith</cite></p>
+						<p class="author"><cite>&mdash; Lucas Koh</cite></p>
 					</blockquote>
 				</div>
 			</div>
