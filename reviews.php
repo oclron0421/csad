@@ -1,13 +1,15 @@
 <?php
     $db = mysqli_connect("localhost", "root", "", "review");
-//    if(isset($_GET['submit'])){
-//        $title = $_GET['text'];
-//        $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
-//        $result = mysqli_query($db, $sql)or die("Query Failed");
-//        
-//    }else{
+    if(isset($_GET['submit'])){
+        $title = $_GET['text'];
+        $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
+        $result = mysqli_query($db, $sql);
+        if(!$result && !($result->num_rows > 0)){
+            $result = mysqli_query($db, "SELECT * FROM food_review");
+        }
+    }else{
         $result = mysqli_query($db, "SELECT * FROM food_review");
-    //}
+    }
     //$data = $conn->query($db, $sql);
 ?>
 <!DOCTYPE HTML>
@@ -114,8 +116,8 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<h1>See <em>Our</em> Gallery</h1>
-                                                        <form action="search.php" method="get">
-                                                            <p style="color:white">Search:<input type="text" style="width:350px; border-radius: 30px;" name="text" value="">
+                                                        <form action="reviews.php" method="get">
+                                                            <p style="color:white">Search:<input type="text" style="padding-left: 20px; color:black; width:350px; border-radius: 30px;" name="text" value="">
                                                             <input style="color: black; border-radius: 20px; "type="submit" name="submit" value="Search">
                                                         </form>
                                                       
@@ -132,7 +134,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Our Posts</h2>
+					<h2>Our Reviews</h2>
 					<div class="row">
 						<div class="col-md-6">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
@@ -146,7 +148,7 @@
                         ?>
                         <div class="card">
                             <div class="image">
-                                <img src="<?php echo $row["image"]; ?>" alt="">
+                                <img src="img/<?php echo $row["image"]; ?>" alt="">
                             </div>
                             <div class="caption">
                                 <p class="rate">
