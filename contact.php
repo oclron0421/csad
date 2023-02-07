@@ -91,11 +91,9 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 
-							<li class="active"><a href="index.php">Home</a></li>
+							<li><a href="index.php">Home</a></li>
 
-							<li ><a href="index.php">Home</a></li>
-
-							</li>
+							<li><a href="reviews.php">Reviews</a></li>
 							<li><a href="about.php">About</a></li>
 							<li class="active"><a href="contact.php">Upload Review</a></li>
                                                         <li><a href="login.php">Login/SignUp</a></li>
