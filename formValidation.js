@@ -18,7 +18,7 @@ function validateForm() {
         can_submit = false;
     }
     else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
-        document.getElementById("email_error").innerHTML = "  Wrong email entered";
+        document.getElementById("email_error").innerHTML = "  Invalid email format";
         can_submit = false;
     }
     if (password == '') {
@@ -48,13 +48,13 @@ function validateForm() {
 
 function validateLogin() {
     try {
-    var username = document.getElementById("username").value;
+    var username = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     document.getElementById("name_error").innerHTML = "";
     document.getElementById("password_error").innerHTML = "";
     var can_submit = true;
     if (username == '') {
-        document.getElementById("name_error").innerHTML = "    " +"Name cannot be empty";
+        document.getElementById("name_error").innerHTML = "    " +"Email cannot be empty";
         can_submit = false;
     }
     if (password == '') {

@@ -76,18 +76,18 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.html">Gallery</a>
+								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Food</a></li>
-									<li><a href="#">Coffees</a></li>
+									<li><a href="#">Restaurants</a></li>
+									<li><a href="#">Cafes</a></li>
+									<li><a href="#">Bars</a></li>
+                                                                        <li><a href="#">Hawker stalls</a></li>
 								</ul>
 							</li>
-							<li class="active"><a href="login.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li class="active"><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -105,19 +105,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Reservation</h2>
+					<h2>Login</h2>
 					<div class="row">
 
 					</div>
 				</div>
-                            <div style="font-size:30pt;color:white">Invalid Username</div>
+				<div style="font-size:30pt;color:white">Invalid Email</div>
 				<div class="^">
 					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="username">Username</label>
+								<label for="email">Email</label>
                                                                 <span id="name_error" style="color:red;margin-left:1.25em;"></span>
-								<input type="text" class="form-control" name="username" id="username">
+								<input type="text" class="form-control" name="email" id="email">
 							</div>
 						</div>
 						<div class="row form-group">
@@ -129,14 +129,14 @@
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form"> 
 							</div>
+                                                    <div>
+                                                        &nbsp;&nbsp;&nbsp;Don't have an account yet? <u><a href="register.php">Sign Up here!</a></a></u>
+                                                    </div>
 						</div>
-
 					</form>
-				</div>
-				
-				
+				</div>	
 			</div>
 		</div>
 	</div>
