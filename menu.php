@@ -67,22 +67,23 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">FoodGasm<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.html">Reviews</a>
+								<a href="reviews.php">Gallery</a>
 								<ul class="dropdown">
-									<li><a href="#">Restaurants</a></li>
-									<li><a href="#">Cafes</a></li>
-									<li><a href="#">Bars</a></li>
-                                                                        <li><a href="#">Hawker stalls</a></li>
+									<li><a href="#">Events</a></li>
+									<li><a href="#">Food</a></li>
+									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Upload Review</a></li>
+							<li><a href="login.php">Reservation</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -98,8 +99,8 @@
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>About <em>our</em> Restaurant</h1>
-						
+							<h1>See <em>Our</em> Menu</h1>
+							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
 						</div>
 					</div>
 				</div>
@@ -107,71 +108,74 @@
 		</div>
 	</header>
 
-	<div id="fh5co-about" class="fh5co-section">
+	<div id="fh5co-featured-menu" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
-					<img src="images/hero_1.jpeg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-				</div>
-				<div class="col-md-5 col-md-push-1 animate-box">
-					<div class="section-heading">
-						<h2>Foodgasm</h2>
-                                                <p> This app aims to help users upload,share and rate food reviews</p>
-                                                    
-                                               
-						<p><a href="#" class="btn btn-primary btn-outline">Our History</a></p>
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Our Delicous Menu</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="fh5co-timeline">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline animate-box">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Our Experience</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-genius"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Brain storming</h3>
-								
-								</div>
-								<div class="timeline-body">
-									<p>Went from shoppee concept app to a food review app..</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-genius"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Create A Restaurant</h3>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-genius"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Added 200+ Employees</h3>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li>
-
-					
-						
-			    	</ul>
+				
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item animate-box">
+						<img src="images/gallery_1.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Bake Potato Pizza</h3>
+						<span class="fh5co-price">$20<sup>.50</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="images/gallery_2.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Bake Potato Pizza</h3>
+						<span class="fh5co-price">$20<sup>.50</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item margin_top animate-box">
+						<img src="images/gallery_3.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Salted Fried Chicken</h3>
+						<span class="fh5co-price">$19<sup>.00</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="images/gallery_4.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Bake Potato Pizza</h3>
+						<span class="fh5co-price">$20<sup>.50</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item animate-box">
+						<img src="images/gallery_5.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Italian Sauce Mushroom</h3>
+						<span class="fh5co-price">$17<sup>.99</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="images/gallery_6.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Bake Potato Pizza</h3>
+						<span class="fh5co-price">$20<sup>.50</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap">
+					<div class="fh5co-item margin_top animate-box">
+						<img src="images/gallery_7.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Fried Potato w/ Garlic</h3>
+						<span class="fh5co-price">$22<sup>.50</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
+					<div class="fh5co-item animate-box">
+						<img src="images/gallery_8.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						<h3>Bake Potato Pizza</h3>
+						<span class="fh5co-price">$20<sup>.50</sup></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -180,34 +184,21 @@
 	<div id="fh5co-featured-testimony" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 fh5co-heading">
-					<h2>Contact our developers</h2>
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Testimony</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<h3 style="color: white;">Lucas koh :</h3>
-                                                        <p><a href="mailto:lucaskohyz@gmail.com">lucaskohyz@gmail.com</a></p>
-						</div>
-                                            <div class="col-md-6">
-							<h3 style="color: white;">Wong Du yuan :</h3>
-                                                        <p><a href="mailto:DUYUAN.21@ichat.sp.edu.sg">DUYUAN.21@ichat.sp.edu.sg</a></p>
-						</div>
-                                            <div class="col-md-6">
-							<h3 style="color: white;">Ron Ong :</h3>
-                                                        <p><a href="mailto:lucaskohyz@gmail.com">oclron04.21@ichat.sp.edu.sg    </a></p>
-						</div>
-                                            <div class="col-md-6">
-							<h3 style="color: white;">Lew Jun wei :</h3>
-                                                        <p><a href="mailto:JUNWEI.21@ichat.sp.edu.sg">JUNWEI.21@ichatmsp.edu.sg</a></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis.</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-md-5 animate-box img-to-responsive">
-						<img src="images/lucaskoh.jpeg" alt="Lew jun weiii">
+						<img src="images/person_1.jpg" alt="">
 				</div>
 				<div class="col-md-7 animate-box">
 					<blockquote>
-						<p> &ldquo; Meet our team &rdquo;</p>
+						<p> &ldquo; Quantum ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam. &rdquo;</p>
 						<p class="author"><cite>&mdash; Jane Smith</cite></p>
 					</blockquote>
 				</div>
@@ -223,7 +214,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Book a Table</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+					<p><a href="login.php" class="btn btn-primary btn-outline">Book Now</a></p>
 				</div>
 			</div>
 		</div>
@@ -281,14 +272,14 @@
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
-                                        <p>
+					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter2"></i></a></li>
 							<li><a href="#"><i class="icon-facebook2"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 						</ul>
-                                        
+					</p>
 				</div>
 			</div>
 
