@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Announcements</title>
 </head>
 <body>
   <?php
+    if( empty(session_id()) && !headers_sent()){
     session_start();
+}
     $db = mysqli_connect('localhost', 'root', '','annoucements');
     if(!$db){
         die("Connection failed: " . mysqli_connect_error());
