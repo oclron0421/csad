@@ -9,11 +9,11 @@ function validateForm() {
     document.getElementById("password_error").innerHTML = "";
     document.getElementById("password_confirm_error").innerHTML = "";
     
-    if (username == '') {
+    if (username === '') {
         document.getElementById("username_error").innerHTML = "  Name cannot be empty";
         can_submit = false;
     }
-    if (email == '') {
+    if (email === '') {
         document.getElementById("email_error").innerHTML = "  Email cannot be empty";
         can_submit = false;
     }
@@ -21,7 +21,7 @@ function validateForm() {
         document.getElementById("email_error").innerHTML = "  Invalid email format";
         can_submit = false;
     }
-    if (password == '') {
+    if (password === '') {
         document.getElementById("password_error").innerHTML = "  Password cannot be empty";
         can_submit = false;
     }
@@ -30,7 +30,7 @@ function validateForm() {
         can_submit = false;
     }
     
-    if (!(password == password_confirm)) {
+    if (!(password === password_confirm)) {
         document.getElementById("password_confirm_error").innerHTML = "  Password must be the same";
         can_submit = false;
     }
@@ -45,7 +45,43 @@ function validateForm() {
         return false;
     }
 }
+function valideUpload() {
+   
+ try{
+      var foodname = document.getElementById("name").value;
+  var location = document.getElementById("location").value;
+  var description = document.getElementById("description").value;
+  var image = document.getElementById("image_input").value;
 
+  if (foodname == "") {
+    document.getElementById("foodname_error").innerHTML = "Please enter food name";
+    document.getElementById("name").focus();
+    return false;
+  }
+  if (location == "") {
+    document.getElementById("location_error").innerHTML = "Please enter location";
+    document.getElementById("location").focus();
+    return false;
+  }
+  if (description == "") {
+    document.getElementById("description_error").innerHTML = "Please enter description";
+    document.getElementById("description").focus();
+    return false;
+  }
+  if (image == "") {
+    document.getElementById("image_error").innerHTML = "Please choose an image";
+    document.getElementById("image_input").focus();
+    return false;
+  }
+  return true;
+ }
+ catch (error) {
+        document.write(error.message);
+    }
+    
+}
+
+  
 function validateLogin() {
     try {
     var username = document.getElementById("email").value;
