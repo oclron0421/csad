@@ -67,6 +67,24 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
+<<<<<<< HEAD
+=======
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<!-- <div class="top-menu"> -->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-center logo-wrap">
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
+					</div>
+					<div class="col-xs-12 text-center menu-1 menu-wrap">
+						<ul>
+>>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
 
 
 							<li class="active"><a href="index.php">Home</a></li>
@@ -179,3 +197,66 @@
                                                 <li><a href="#">Upload Review</a></li>
 					</ul>
 				</div>
+<<<<<<< HEAD
+=======
+
+
+
+
+    
+                                <div class="col-md-4 col-md-push-1 fh5co-widget">
+                                    <h4>Contact Information</h4>
+                                    <ul class="fh5co-footer-links">
+                                        <li><a href="https://www.sp.edu.sg/"> Singapore Polytechnic <br> 500 Dover Rd, Singapore 139651</a></li>
+                                        <li><a href="tel://1234567920">+65 12345678</a></li>
+                                        <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="row copyright">
+                                <div class="col-md-12 text-center">
+                                    <p>
+                                        <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+                                        <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+                                    </p>
+                                    <p>
+                                    <ul class="fh5co-social-icons">
+                                        <li><a href="#"><i class="icon-twitter2"></i></a></li>
+                                        <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                                        <li><a href="#"><i class="icon-linkedin2"></i></a></li>
+                                        <li><a href="#"><i class="icon-dribbble2"></i></a></li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </footer>
+                </div>
+
+                <div class="gototop js-top">
+                    <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+                </div>
+
+                <!-- jQuery -->
+                <script src="js/jquery.min.js"></script>
+                <!-- jQuery Easing -->
+                <script src="js/jquery.easing.1.3.js"></script>
+                <!-- Bootstrap -->
+                <script src="js/bootstrap.min.js"></script>
+                <!-- Waypoints -->
+                <script src="js/jquery.waypoints.min.js"></script>
+                <!-- Waypoints -->
+                <script src="js/jquery.stellar.min.js"></script>
+                <!-- Flexslider -->
+                <script src="js/jquery.flexslider-min.js"></script>
+                <!-- Main -->   
+                <script src="js/main.js"></script>
+                <script src="putPhoto.js"></script>
+                </body>
+                </html>
+
+>>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
