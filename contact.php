@@ -58,7 +58,7 @@
         <!-- Flexslider  -->
         <link rel="stylesheet" href="css/flexslider.css">
 
-<<<<<<< HEAD
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -66,7 +66,6 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
        
-=======
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -76,9 +75,6 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-<<<<<<< HEAD
-=======
->>>>>>> 44ccb2252eb1204865455129eef1160bac820779
 	</head>
 	<body>
 		
@@ -280,4 +276,3 @@
                 </body>
                 </html>
 
->>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
