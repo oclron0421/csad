@@ -72,7 +72,7 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="index.php">Home</a></li>
 							<li class="has-dropdown">
 								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
@@ -83,8 +83,8 @@
 								</ul>
 							</li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="contact.html">Upload Review</a></li>
-                                                        
+							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li><a href="login.php">Login/SignUp</a></li>
 						</ul>
                                           
 					</div>
@@ -333,7 +333,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Upload a review </h2>
 					<p>Share your wonderful food stories with others, lets spread the love for food with one another!</p>
-					<p><a href="login.html" class="btn btn-primary btn-outline">Upload now!</a></p>
+					<p><a href="contact.php" class="btn btn-primary btn-outline">Upload now!</a></p>
 				</div>
 			</div>
 		</div>

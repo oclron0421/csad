@@ -71,7 +71,7 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="index.php">Home</a></li>
+							<li ><a href="index.php">Home</a></li>
 							<li class="has-dropdown">
 								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
@@ -81,8 +81,9 @@
                                                                         <li><a href="#">Hawker stalls</a></li>
 								</ul>
 							</li>
-							<li><a href="about.php">About</a></li>
+							<li class="active"><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -233,8 +234,8 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
-					<h4>Foodgasm</h4>
-					<p>Done By: Ron Ong <br>
+					<h4>FoodGasm</h4>
+                                        <p>Done By: Ron Ong <br>
                                                     Wong Du Yuan <br>
                                                     Lew Jun Wei <br>
                                                     Lucas Koh <br>
@@ -246,30 +247,22 @@
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="#">Menu</a></li>
+						<li><a href="#">Reviews</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Upload Review</a></li>
 					</ul>
 				</div>
 
-				<div class="col-md-2 col-md-push-1 fh5co-widget">
-					<h4>Categories</h4>
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Landing Page</a></li>
-						<li><a href="#">Real Estate</a></li>
-						<li><a href="#">Personal</a></li>
-						<li><a href="#">Business</a></li>
-						<li><a href="#">e-Commerce</a></li>
-					</ul>
-				</div>
+
 
 				<div class="col-md-4 col-md-push-1 fh5co-widget">
 					<h4>Contact Information</h4>
 					<ul class="fh5co-footer-links">
-						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                                            <li><a href="https://www.sp.edu.sg/"> Singapore Polytechnic <br> 500 Dover Rd, Singapore 139651</a></li>
+						<li><a href="tel://1234567920">+65 12345678</a></li>
 						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-						<li><a href="http://https://freehtml5.co">freehtml5.co</a></li>
+						
 					</ul>
 				</div>
 
@@ -281,15 +274,15 @@
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
-                                        <p>
+					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter2"></i></a></li>
 							<li><a href="#"><i class="icon-facebook2"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 						</ul>
-                                        
-				</div>
+					</p>
+                                </div>
 			</div>
 
 		</div>
