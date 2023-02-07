@@ -75,18 +75,18 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.php">Gallery</a>
+								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Food</a></li>
-									<li><a href="#">Coffees</a></li>
+									<li><a href="#">Restaurants</a></li>
+									<li><a href="#">Cafes</a></li>
+									<li><a href="#">Bars</a></li>
+                                                                        <li><a href="#">Hawker stalls</a></li>
 								</ul>
 							</li>
-							<li class="active"><a href="login.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li class="active"><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -135,6 +135,9 @@
                                                             <div class="col-md-12">
                                                                     <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
                                                             </div>
+                                                        <div>
+                                                            &nbsp;&nbsp;&nbsp;Already have an account? <u><a href="login.php">Login here!</a></a></u>
+                                                        </div>
                                                     </div>
                                                	
 					</form>

@@ -72,11 +72,9 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-
 							<li><a href="index.php">Home</a></li>
-                                                        <li class="has-dropdown active">
+							<li class="has-dropdown active">
 								<a href="reviews.php">Reviews</a>
-
 								<ul class="dropdown">
 									<li><a href="#">Restaurants</a></li>
 									<li><a href="#">Cafes</a></li>
@@ -84,10 +82,9 @@
                                                                         <li><a href="#">Hawker stalls</a></li>
 								</ul>
 							</li>
-						
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
-
+                                                        <li><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -219,8 +216,8 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
-					<h4>Foodgasm</h4>
-					<p>Done By: Ron Ong <br>
+					<h4>FoodGasm</h4>
+                                        <p>Done By: Ron Ong <br>
                                                     Wong Du Yuan <br>
                                                     Lew Jun Wei <br>
                                                     Lucas Koh <br>
@@ -232,13 +229,14 @@
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
 						<li><a href="#">Menu</a></li>
-						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Reviews</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Upload Review</a></li>
 					</ul>
 				</div>
 
-			
+
 
 				<div class="col-md-4 col-md-push-1 fh5co-widget">
 					<h4>Contact Information</h4>
@@ -266,7 +264,7 @@
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 						</ul>
 					</p>
-				</div>
+                                </div>
 			</div>
 
 		</div>

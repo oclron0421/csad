@@ -84,7 +84,7 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li ><a href="index.php">Home</a></li>
 							<li class="has-dropdown">
 								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
@@ -96,6 +96,7 @@
 							</li>
 							<li><a href="about.php">About</a></li>
 							<li class="active"><a href="contact.php">Upload Review</a></li>
+                                                        <li><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -111,8 +112,7 @@
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>Get <em>in</em> Touch</h1>
-							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+							<h1>Upload a Review!</h1>
 						</div>
 					</div>
 				</div>
@@ -132,36 +132,41 @@
 			</div>
 			
 			<div class="row">
-				<div >
-					<form action="#" id="form-wrap">
+				<div>
+					<form action="servierReview.php" id="form-wrap" method="post" enctype="multipart/form-data">
+
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="name">Food</label>
-								<input name="name" type="text" class="form-control" id="name">
+								<input name="foodname" type="text" class="form-control" id="name">
+
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="email">Location</label>
 								<input name="location" id="location" type="text" class="form-control">
+
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="description">Food Description</label>
 								<textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+
 							</div>
 						</div>
                                                 <div class="row form-group">
 							<div class="col-md-12">
 								<label for="image">Images</label>
-                                                                <input  type="file" class="form_control" id="image_input" name="image_input" accept="image/png, image/jpg">
+                                                                <input  type="file" class="form_control" id="image_input" name="image" accept="image/png, image/jpg">
                                                                 <div id="display_image"><div/>
 							</div>
 						</div><br>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form" name="submit">
+
 							</div>
                                                 </div>            
 					</form>
@@ -175,8 +180,8 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget">
-					<h4>Foodgasm</h4>
-					<p>Done By: Ron Ong <br>
+					<h4>FoodGasm</h4>
+                                        <p>Done By: Ron Ong <br>
                                                     Wong Du Yuan <br>
                                                     Lew Jun Wei <br>
                                                     Lucas Koh <br>
@@ -188,30 +193,22 @@
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="#">Menu</a></li>
+						<li><a href="#">Reviews</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Upload Review</a></li>
 					</ul>
 				</div>
 
-				<div class="col-md-2 col-md-push-1 fh5co-widget">
-					<h4>Categories</h4>
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Landing Page</a></li>
-						<li><a href="#">Real Estate</a></li>
-						<li><a href="#">Personal</a></li>
-						<li><a href="#">Business</a></li>
-						<li><a href="#">e-Commerce</a></li>
-					</ul>
-				</div>
+
 
 				<div class="col-md-4 col-md-push-1 fh5co-widget">
 					<h4>Contact Information</h4>
 					<ul class="fh5co-footer-links">
-						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+                                            <li><a href="https://www.sp.edu.sg/"> Singapore Polytechnic <br> 500 Dover Rd, Singapore 139651</a></li>
+						<li><a href="tel://1234567920">+65 12345678</a></li>
 						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-						<li><a href="http://https://freehtml5.co">freehtml5.co</a></li>
+						
 					</ul>
 				</div>
 
@@ -231,7 +228,7 @@
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 						</ul>
 					</p>
-				</div>
+                                </div>
 			</div>
 
 		</div>
@@ -241,7 +238,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
-	
+            
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

@@ -83,6 +83,7 @@
 							</li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
