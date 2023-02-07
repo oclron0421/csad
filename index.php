@@ -71,7 +71,7 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="index.php">Home</a></li>
 							<li class="has-dropdown">
 								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
