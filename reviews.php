@@ -152,11 +152,15 @@
                             </div>
                             <div class="caption">
                                 <p class="rate">
+                                    <?php
+                                    $rating = $row["rating"];
+                                    for($i=0; $i<$rating; $i++)
+                                    {
+                                    ?>
                                     <img src="images/star1.png">
-                                    <img src="images/star1.png">
-                                    <img src="images/star1.png">
-                                    <img src="images/star1.png">
-                                    <img src="images/star1.png">
+                                    <?php
+                                    }
+                                    ?>
                                 </p><!-- comment -->
                                 <p class="food_name">Food name:
                                 <?php echo $row["foodname"];  ?>
