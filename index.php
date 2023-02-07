@@ -141,7 +141,7 @@ if($_SESSION['username'] == "") {
 						<?php include 'bannerCode.php'; ?>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+<!--				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item margin_top">
 						<img src="images/gallery_8.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 						<h3>Salted Fried Chicken</h3>
@@ -164,7 +164,7 @@ if($_SESSION['username'] == "") {
 						<h3>Fried Potato w/ Garlic</h3>
 						<span class="fh5co-price">$22<sup>.50</sup></span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
@@ -355,11 +355,11 @@ if($_SESSION['username'] == "") {
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Reviews</a></li>
-                                                <li><a href="#">About</a></li>
-                                                <li><a href="#">Upload Review</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="reviews.php">Review</a></li>
+						<li><a href="about.php">About</a></li>
+                                                <li><a href="contact.php">Upload Review</a></li>
+                                                <li><a href="login.php">Login/Signup</a></li>
 					</ul>
 				</div>
 

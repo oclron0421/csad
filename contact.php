@@ -204,11 +204,11 @@ if($_SESSION['username'] == "") {
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Reviews</a></li>
-                                                <li><a href="#">About</a></li>
-                                                <li><a href="#">Upload Review</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="review.php">Review</a></li>
+						<li><a href="about.php">About</a></li>
+                                                <li><a href="contact.php">Upload Review</a></li>
+                                                <li><a href="login.php">Login/Signup</a></li>
 					</ul>
 				</div>
 
