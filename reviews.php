@@ -11,13 +11,14 @@ if($_SESSION['username'] == "") {
         $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
         $result = mysqli_query($db, $sql);
         if(!$result && !($result->num_rows > 0)){
-            $result = mysqli_query($db, "SELECT * FROM food_review");
+            $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
         }
     }else{
-        $result = mysqli_query($db, "SELECT * FROM food_review");
+        $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
     }
     //$data = $conn->query($db, $sql);
 ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head> 
@@ -128,7 +129,7 @@ if($_SESSION['username'] == "") {
 	</header>
 
 	
-	<div id="fh5co-gallery" class="fh5co-section">
+	<div id="fh5co-slider" class="fh5co-section animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
@@ -137,44 +138,45 @@ if($_SESSION['username'] == "") {
 						<div class="col-md-6">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
 						</div>
-					</div>
-				</div>
-                    <main>
-                        <?php
-                        if($result && $result->num_rows > 0){ 
-                            while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                        <div class="card">
-                            <div class="image">
-                                <img src="images/<?php echo $row["image"]; ?>" alt="">
-                            </div>
-                            <div class="caption">
-                                <p class="rate">
-                                    <?php
-                                    $rating = $row["rating"];
-                                    for($i=0; $i<$rating; $i++)
-                                    {
-                                    ?>
-                                    <img src="images/star1.png">
-                                    <?php
-                                    }
-                                    ?>
-                                </p><!-- comment -->
-                                <p class="food_name">Food name:
-                                <?php echo $row["foodname"];  ?>
-                                </br></br>Location: <?php echo $row["location"];  ?>
-                                </br></br>Description:
-                                </br><?php echo $row["description"]; ?>
+                                            <main>
+                                                <?php
+                                                if($result && $result->num_rows > 0){ 
+                                                    while($row = mysqli_fetch_assoc($result)){
+                                                ?>
+                                                <div class="card">
+                                                    <div class="image">
+                                                        <img src="images/<?php echo $row["image"]; ?>" alt="">
+                                                    </div>
+                                                    <div class="caption">
+                                                        <p class="rate">
+                                                            <?php
+                                                            $rating = $row["rating"];
+                                                            for($i=0; $i<$rating; $i++)
+                                                            {
+                                                            ?>
+                                                            <img src="images/star1.png">
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        <!-- comment -->
+                                                        <p class="food_name">Food name:
+                                                        <?php echo $row["foodname"];  ?>
+                                                        </br></br>Location: <?php echo $row["location"];  ?>
+                                                        </br></br>Description:
+                                                        </br><?php echo $row["description"]; ?>
+                                                    </div> 
+                                                </div>
+                                                <?php
+                                                    }
+                                                }
+                                                mysqli_close($db);
+                                                ?>
 
-                            </div> 
-                        </div>
-                        <?php
-                            }
-                        }
-                        mysqli_close($db);
-                        ?>
-                       
-                    </main>
+                                            </main>
+					</div>
+                                     
+				</div>
+                                    
                             
                         
 			</div>
@@ -206,7 +208,10 @@ if($_SESSION['username'] == "") {
 		</div>
 	</div>
 	
-        <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+
+       
+	
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/lewjunwei.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -218,6 +223,7 @@ if($_SESSION['username'] == "") {
 			</div>
 		</div>
 	</div>
+
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
 			<div class="row row-pb-md">
@@ -234,47 +240,46 @@ if($_SESSION['username'] == "") {
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Reviews</a></li>
-                                                <li><a href="#">About</a></li>
-                                                <li><a href="#">Upload Review</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="reviews.php">Review</a></li>
+						<li><a href="about.php">About</a></li>
+                                                <li><a href="contact.php">Upload Review</a></li>
+                                                <li><a href="login.php">Login/Signup</a></li>
 					</ul>
 				</div>
 
+    
+                                <div class="col-md-4 col-md-push-1 fh5co-widget">
+                                    <h4>Contact Information</h4>
+                                    <ul class="fh5co-footer-links">
+                                        <li><a href="https://www.sp.edu.sg/"> Singapore Polytechnic <br> 500 Dover Rd, Singapore 139651</a></li>
+                                        <li><a href="tel://1234567920">+65 12345678</a></li>
+                                        <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
 
-
-				<div class="col-md-4 col-md-push-1 fh5co-widget">
-					<h4>Contact Information</h4>
-					<ul class="fh5co-footer-links">
-                                            <li><a href="https://www.sp.edu.sg/"> Singapore Polytechnic <br> 500 Dover Rd, Singapore 139651</a></li>
-						<li><a href="tel://1234567920">+65 12345678</a></li>
-						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-						
-					</ul>
-				</div>
-
-			</div>
-
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter2"></i></a></li>
-							<li><a href="#"><i class="icon-facebook2"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
-						</ul>
-					</p>
+                                    </ul>
                                 </div>
-			</div>
 
-		</div>
-	</footer>
+                            </div>
+
+                            <div class="row copyright">
+                                <div class="col-md-12 text-center">
+                                    <p>
+                                        <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+                                        <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+                                    </p>
+                                    <p>
+                                    <ul class="fh5co-social-icons">
+                                        <li><a href="#"><i class="icon-twitter2"></i></a></li>
+                                        <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                                        <li><a href="#"><i class="icon-linkedin2"></i></a></li>
+                                        <li><a href="#"><i class="icon-dribbble2"></i></a></li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </footer>
 	</div>
 
 	<div class="gototop js-top">
