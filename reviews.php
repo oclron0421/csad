@@ -11,13 +11,14 @@ if($_SESSION['username'] == "") {
         $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
         $result = mysqli_query($db, $sql);
         if(!$result && !($result->num_rows > 0)){
-            $result = mysqli_query($db, "SELECT * FROM food_review");
+            $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
         }
     }else{
-        $result = mysqli_query($db, "SELECT * FROM food_review");
+        $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
     }
     //$data = $conn->query($db, $sql);
 ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head> 
@@ -159,13 +160,12 @@ if($_SESSION['username'] == "") {
                                     <?php
                                     }
                                     ?>
-                                </p><!-- comment -->
+                                <!-- comment -->
                                 <p class="food_name">Food name:
                                 <?php echo $row["foodname"];  ?>
                                 </br></br>Location: <?php echo $row["location"];  ?>
                                 </br></br>Description:
                                 </br><?php echo $row["description"]; ?>
-
                             </div> 
                         </div>
                         <?php

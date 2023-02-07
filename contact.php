@@ -81,7 +81,7 @@ if($_SESSION['username'] == "") {
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-
+       
 	</head>
 	<body>
 		
@@ -143,6 +143,7 @@ if($_SESSION['username'] == "") {
 					<form action="servierReview.php" id="form-wrap" method="post" enctype="multipart/form-data">
 
 						<div class="row form-group">
+                                                    <input type="hidden" name="id" ">
 							<div class="col-md-12">
 								<label for="name">Food</label>
 								<input name="foodname" type="text" class="form-control" id="name">
@@ -178,8 +179,10 @@ if($_SESSION['username'] == "") {
 						</div><br>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form" name="submit">
-							</div>
+                                                            
+                                                                    <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form" name="submit">
+                                                         
+                                                        </div>
                                                 </div>            
 					</form>
 				</div>
