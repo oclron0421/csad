@@ -140,7 +140,7 @@ if($_SESSION['username'] == "") {
 					</div>
 				</div>
 				
-				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+				<div >
 					<div >
 						<?php include 'bannerCode.php'; ?>
 					</div>

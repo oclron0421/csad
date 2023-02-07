@@ -202,7 +202,7 @@ if($_SESSION['username'] == "") {
 				</div>
 
 				<div class="col-md-5 animate-box img-to-responsive">
-						<img src="images/lucaskoh.jpeg" alt="Lew jun weiii">
+						<img src="images/jwp2.jpeg" alt="Lew jun weiii">
 				</div>
 				<div class="col-md-7 animate-box">
 					<blockquote>
