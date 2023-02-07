@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
 
     // check if all fields are filled
     if (!empty($foodname) && !empty($location) && !empty($description)) {
+        
         $file = $_FILES['image'];
         $fileName = $_FILES['image']['name'];
         $fileTmpName = $_FILES['image']['tmp_name'];
@@ -34,8 +35,11 @@ if (isset($_POST['submit'])) {
         if (in_array($fileActualExt, $allowed)) {
             if ($fileError === 0) {
                 if ($fileSize < 1000000) {
+                    //$fileNameNew = uniqid(); 
+                    //$fileNameNew .= "." . $fileActualExt;
                     $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-                    $fileDestination = 'uploads/' . $fileNameNew;
+                        
+                    $fileDestination = 'img/' . $fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
                     $stmt = $conn->prepare("INSERT INTO `food_review` (`foodname`, `location`, `image`, `description`) VALUES (?, ?, ?, ?)");
                     $stmt->bind_param("ssss", $foodname, $location, $fileDestination, $description);
@@ -51,7 +55,9 @@ if (isset($_POST['submit'])) {
             echo "You cannot upload files of this type!";
         }
     }
+    
 }
 
 $conn->close();
+
 ?>
