@@ -83,6 +83,7 @@
 							</li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li><a href="login.php">Login/SignUp</a></li>
 						</ul>
 					</div>
 				</div>
@@ -134,11 +135,8 @@
 				</div>
 				
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
-					<div class="fh5co-item">
-						<img src="images/gallery_9.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>Bake Potato Pizza</h3>
-						<span class="fh5co-price">$20<sup>.50</sup></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					<div >
+						<?php include 'bannerCode.php'; ?>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
@@ -332,7 +330,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Upload a review </h2>
 					<p>Share your wonderful food stories with others, lets spread the love for food with one another!</p>
-					<p><a href="login.html" class="btn btn-primary btn-outline">Upload now!</a></p>
+					<p><a href="contact.php" class="btn btn-primary btn-outline">Upload now!</a></p>
 				</div>
 			</div>
 		</div>
