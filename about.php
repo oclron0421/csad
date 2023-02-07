@@ -43,7 +43,6 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 
@@ -68,13 +67,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">FoodGasm<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li class="has-dropdown active">
-								<a href="reviews.html">Reviews</a>
+							<li class="has-dropdown">
+								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
 									<li><a href="#">Restaurants</a></li>
 									<li><a href="#">Cafes</a></li>
@@ -82,9 +81,8 @@
                                                                         <li><a href="#">Hawker stalls</a></li>
 								</ul>
 							</li>
-                                                        
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Upload Review</a></li>
+							<li class="active"><a href="about.html">About</a></li>
+							<li><a href="contact.php">Upload Review</a></li>
 						</ul>
 					</div>
 				</div>
@@ -100,8 +98,8 @@
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>See <em>Our</em> Gallery</h1>
-							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+							<h1>About <em>our</em> Restaurant</h1>
+						
 						</div>
 					</div>
 				</div>
@@ -109,66 +107,71 @@
 		</div>
 	</header>
 
-	
-	<div id="fh5co-gallery" class="fh5co-section">
+	<div id="fh5co-about" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Our Gallery</h2>
-					<div class="row">
-						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
-						</div>
+				<div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
+					<img src="images/hero_1.jpeg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+				</div>
+				<div class="col-md-5 col-md-push-1 animate-box">
+					<div class="section-heading">
+						<h2>Foodgasm</h2>
+                                                <p> This app aims to help users upload,share and rate food reviews</p>
+                                                    
+                                               
+						<p><a href="#" class="btn btn-primary btn-outline">Our History</a></p>
 					</div>
 				</div>
-				
+			</div>
+		</div>
+	</div>
 
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_1.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_2.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_4.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-				</div>
+	<div id="fh5co-timeline">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0">
+					<ul class="timeline animate-box">
+						<li class="timeline-heading text-center animate-box">
+							<div><h3>Our Experience</h3></div>
+						</li>
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-genius"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Brain storming</h3>
+								
+								</div>
+								<div class="timeline-body">
+									<p>Went from shoppee concept app to a food review app..</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge"><i class="icon-genius"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Create A Restaurant</h3>
+								</div>
+								<div class="timeline-body">
+									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</li>
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-genius"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Added 200+ Employees</h3>
+								</div>
+								<div class="timeline-body">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						</li>
 
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_6.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_7.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_9.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_1.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_2.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_4.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_5.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_6.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_7.jpeg);" data-trigger="zoomerang"></div>
-					<div class="fh5co-bg-img" style="background-image: url(images/gallery_8.jpeg);" data-trigger="zoomerang"></div>
-				</div>
-				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
-					<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url(images/gallery_9.jpeg);" data-trigger="zoomerang"></div>
+					
+						
+			    	</ul>
 				</div>
 			</div>
 		</div>
@@ -177,27 +180,41 @@
 	<div id="fh5co-featured-testimony" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Testimony</h2>
+				<div class="col-md-12 fh5co-heading">
+					<h2>Contact our developers</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis.</p>
+							<h3 style="color: white;">Lucas koh :</h3>
+                                                        <p><a href="mailto:lucaskohyz@gmail.com">lucaskohyz@gmail.com</a></p>
+						</div>
+                                            <div class="col-md-6">
+							<h3 style="color: white;">Wong Du yuan :</h3>
+                                                        <p><a href="mailto:DUYUAN.21@ichat.sp.edu.sg">DUYUAN.21@ichat.sp.edu.sg</a></p>
+						</div>
+                                            <div class="col-md-6">
+							<h3 style="color: white;">Ron Ong :</h3>
+                                                        <p><a href="mailto:lucaskohyz@gmail.com">oclron04.21@ichat.sp.edu.sg    </a></p>
+						</div>
+                                            <div class="col-md-6">
+							<h3 style="color: white;">Lew Jun wei :</h3>
+                                                        <p><a href="mailto:JUNWEI.21@ichat.sp.edu.sg">JUNWEI.21@ichatmsp.edu.sg</a></p>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-md-5 animate-box img-to-responsive animate-box" data-animate-effect="fadeInLeft">
-						<img src="images/person_1.jpg" alt="">
+				<div class="col-md-5 animate-box img-to-responsive">
+						<img src="images/lucaskoh.jpeg" alt="Lew jun weiii">
 				</div>
-				<div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
+				<div class="col-md-7 animate-box">
 					<blockquote>
-						<p> &ldquo; Quantum ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam. &rdquo;</p>
+						<p> &ldquo; Meet our team &rdquo;</p>
 						<p class="author"><cite>&mdash; Jane Smith</cite></p>
 					</blockquote>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	
 	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -229,21 +246,30 @@
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="#">Home</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Blog</a></li>
 						<li><a href="#">About</a></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Gallery</a></li>
 					</ul>
 				</div>
 
-			
+				<div class="col-md-2 col-md-push-1 fh5co-widget">
+					<h4>Categories</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="#">Landing Page</a></li>
+						<li><a href="#">Real Estate</a></li>
+						<li><a href="#">Personal</a></li>
+						<li><a href="#">Business</a></li>
+						<li><a href="#">e-Commerce</a></li>
+					</ul>
+				</div>
 
 				<div class="col-md-4 col-md-push-1 fh5co-widget">
 					<h4>Contact Information</h4>
 					<ul class="fh5co-footer-links">
-                                            <li><a href="https://www.sp.edu.sg/"> Singapore Polytechnic <br> 500 Dover Rd, Singapore 139651</a></li>
-						<li><a href="tel://1234567920">+65 12345678</a></li>
+						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
+						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
 						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-						
+						<li><a href="http://https://freehtml5.co">freehtml5.co</a></li>
 					</ul>
 				</div>
 
@@ -255,14 +281,14 @@
 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
 					</p>
-					<p>
+                                        <p>
 						<ul class="fh5co-social-icons">
 							<li><a href="#"><i class="icon-twitter2"></i></a></li>
 							<li><a href="#"><i class="icon-facebook2"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 						</ul>
-					</p>
+                                        
 				</div>
 			</div>
 
@@ -286,20 +312,8 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	<script src="js/zoomerang.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
-	<script>
-		Zoomerang
-      .config({
-        maxHeight: 600,
-        maxWidth: 900,
-        bgColor: '#000',
-        bgOpacity: .85
-      })
-      .listen('[data-trigger="zoomerang"]')
-	</script>
 
 	</body>
 </html>

@@ -70,23 +70,23 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">FoodGasm<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="menu.html">Menu</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.html">Gallery</a>
+								<a href="reviews.php">Gallery</a>
 								<ul class="dropdown">
 									<li><a href="#">Events</a></li>
 									<li><a href="#">Food</a></li>
 									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
-							<li class="active"><a href="login.html">Reservation</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li class="active"><a href="login.php">Reservation</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>

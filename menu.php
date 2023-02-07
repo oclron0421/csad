@@ -67,23 +67,23 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">FoodGasm<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li class="active"><a href="menu.html">Menu</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.html">Gallery</a>
+								<a href="reviews.php">Gallery</a>
 								<ul class="dropdown">
 									<li><a href="#">Events</a></li>
 									<li><a href="#">Food</a></li>
 									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
-							<li><a href="login.html">Reservation</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="login.php">Reservation</a></li>
+							<li><a href="about.php">About</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -214,7 +214,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Book a Table</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="login.html" class="btn btn-primary btn-outline">Book Now</a></p>
+					<p><a href="login.php" class="btn btn-primary btn-outline">Book Now</a></p>
 				</div>
 			</div>
 		</div>
