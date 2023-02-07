@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
+<?php session_start(); ?>
 <html>
 	<head>
-        <script src="formValidation.js"></script>   
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.1/jsencrypt.min.js"></script>
+        <script src="formValidation.js"></script>  
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
@@ -77,18 +77,18 @@
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
+							<li><a href="menu.php">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="reviews.php">Reviews</a>
+								<a href="reviews.html">Gallery</a>
 								<ul class="dropdown">
-									<li><a href="#">Restaurants</a></li>
-									<li><a href="#">Cafes</a></li>
-									<li><a href="#">Bars</a></li>
-                                                                        <li><a href="#">Hawker stalls</a></li>
+									<li><a href="#">Events</a></li>
+									<li><a href="#">Food</a></li>
+									<li><a href="#">Coffees</a></li>
 								</ul>
 							</li>
+							<li class="active"><a href="login.php">Reservation</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="contact.php">Upload Review</a></li>
-                                                        <li class="active"><a href="login.php">Login/SignUp</a></li>
+							<li><a href="contact.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -102,57 +102,11 @@
 	</header>
 
 	
-	<div id="fh5co-reservation-form" class="fh5co-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Sign Up</h2>
-					<div class="row">
+            <div class="fh5co-section" style='font-size:40pt; text-align:center'> You've been logged in as <div style='text-decoration: underline; color:burlywood'><?php echo $_SESSION["username"]?></div></div>
 
-					</div>
-				</div>
-				
-				<div class="^">
-                                    <form action="registerAccount.php" method="POST" onsubmit="return validateForm();" name="form" id="form-wrap">
-						<div class="row form-group">
-                                                    <div class="col-md-12">
-                                                                    <label for="email">Email</label>
-                                                                    <span id="email_error" style="color:red;"></span>
-                                                                    <input type="text" class="form-control" id="email">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                                    <label for="username">Username</label>
-                                                                    <span id="username_error" style="color:red;"></span>
-                                                                    <input type="text" class="form-control" id="username">
-                                                    </div>
-
-                                                            <div class="col-md-12">
-                                                                    <label for="password">Password</label>
-                                                                    <span id="password_error" style="color:red;"></span>
-                                                                    <input type="password" class="form-control" id="password">
-                                                            </div>       
-                                                            <div class="col-md-12">
-                                                                    <label for="password_confirm">Confirm Password</label>
-                                                                    <span id="password_confirm_error" style="color:red;"></span>
-                                                                    <input type="password" class="form-control" id="password_confirm">
-                                                                    <input type="hidden" id="name_s" name="name_s">
-                                                                    <input type="hidden" id="email_s" name="email_s">
-                                                                    <input type="hidden" id="encrypt" name="encrypt">
-                                                            </div> 
-                                                </div>
-                                                    <div class="row form-group">
-                                                            <div class="col-md-12">
-                                                                    <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
-                                                            </div>
-                                                        <div>
-                                                            &nbsp;&nbsp;&nbsp;Already have an account? <u><a href="login.php">Login here!</a></a></u>
-                                                        </div>
-                                                    </div>
-                                               	
-					</form>
-                            </div>
-                    </div>
-            </div>
+	
+	
+	
 	
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">

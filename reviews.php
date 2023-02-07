@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+	<head> 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>

@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <script src="formValidation.js"></script>  
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tasty &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
@@ -111,17 +112,19 @@
 				</div>
 				
 				<div class="^">
-					<form action="#" id="form-wrap">
+					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="name">Email/Username</label>
-								<input type="text" class="form-control" id="name">
+								<label for="username">Username</label>
+                                                                <span id="name_error" style="color:red;margin-left:1.25em;"></span>
+								<input type="text" class="form-control" name="username" id="username">
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="many">Password</label>
-								<input type="text" class="form-control" id="name">
+								<label for="password">Password</label>
+                                                                <span id="password_error" style="color:red;margin-left:1.25em;"></span>
+								<input type="password" class="form-control" name="password" id="password">
 							</div>
 						</div>
 						<div class="row form-group">
