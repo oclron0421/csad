@@ -82,7 +82,7 @@
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li class="active"><a href="index.php">Home</a></li>
 							<li class="has-dropdown">
 								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
@@ -131,35 +131,40 @@
 			
 			<div class="row">
 				<div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6">
-					<form action="#" id="form-wrap">
+					<form action="servierReview.php" id="form-wrap" method="post" enctype="multipart/form-data">
+
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="name">Food</label>
-								<input name="name" type="text" class="form-control" id="name">
+								<input name="foodname" type="text" class="form-control" id="name">
+
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="email">Location</label>
 								<input name="location" id="location" type="text" class="form-control">
+
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label for="description">Food Description</label>
 								<textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+
 							</div>
 						</div>
                                                 <div class="row form-group">
 							<div class="col-md-12">
 								<label for="image">Images</label>
-                                                                <input  type="file" class="form_control" id="image_input" name="image_input" accept="image/png, image/jpg">
+                                                                <input  type="file" class="form_control" id="image_input" name="image" accept="image/png, image/jpg">
                                                                 <div id="display_image"><div/>
 							</div>
 						</div><br>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form" name="submit">
+
 							</div>
                                                 </div>
                                                             
