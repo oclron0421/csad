@@ -68,14 +68,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">FoodGasm<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.php">FoodGasm<span>.</span></a></div>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="menu.html">Menu</a></li>
 							<li class="has-dropdown">
-								<a href="gallery.html">Reviews</a>
+								<a href="reviews.php">Reviews</a>
 								<ul class="dropdown">
 									<li><a href="#">Restaurants</a></li>
 									<li><a href="#">Cafes</a></li>
@@ -83,7 +82,7 @@
                                                                         <li><a href="#">Hawker stalls</a></li>
 								</ul>
 							</li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="about.php">About</a></li>
 							<li><a href="contact.html">Upload Review</a></li>
                                                         
 						</ul>
@@ -139,11 +138,8 @@
 				</div>
 				
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
-					<div class="fh5co-item">
-						<img src="images/gallery_9.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
-						<h3>Bake Potato Pizza</h3>
-						<span class="fh5co-price">$20<sup>.50</sup></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
+					<div >
+						<?php include 'bannerCode.php'; ?>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
@@ -271,7 +267,7 @@
 			</div>
 		</div>
 	</div>
-<!-- leave it as is not sure what to put in here -->
+<!-- banner can go in here -->
 	<div id="fh5co-blog" class="fh5co-section">
 		<div class="container">
 			<div class="row animate-box">
@@ -337,11 +333,12 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Upload a review </h2>
 					<p>Share your wonderful food stories with others, lets spread the love for food with one another!</p>
-					<p><a href="reservation.html" class="btn btn-primary btn-outline">Upload now!</a></p>
+					<p><a href="login.html" class="btn btn-primary btn-outline">Upload now!</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
+<!-- banner ends here -->
 
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
@@ -395,7 +392,7 @@
 							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
 						</ul>
 					</p>
-				</div>
+                                </div>
 			</div>
 
 		</div>
