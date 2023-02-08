@@ -38,6 +38,7 @@ $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
             $_SESSION['username'] = $data[$user_index]["username"];
             $_SESSION['email'] = $data[$user_index]["email"];
             $_SESSION['password'] = $data[$user_index]["password"];
+            $_SESSION['id'] = $data[$user_index]["id"];
             $_username = $data[$user_index]["username"];
             $_email = $data[$user_index]["email"];
             if ($_POST["remember"] == "checked") {

@@ -1,8 +1,10 @@
 <?php 
+require 'like_func.php';
 session_start();
 if($_SESSION['username'] == "") {
     header("Location: login_noLogin.php");
 }
+$myid = $_SESSION['id'];
 ?>
 <?php
     $db1 =  mysqli_connect("localhost", "root", "", "review");
@@ -150,6 +152,7 @@ if($_SESSION['username'] == "") {
                                                     <div class="caption">
                                                         <p class="rate">
                                                             <?php
+                                                            $id = $row['id'];
                                                             $rating = $row["rating"];
                                                             for($i=0; $i<$rating; $i++)
                                                             {
@@ -165,11 +168,36 @@ if($_SESSION['username'] == "") {
                                                         </br></br>Description:
                                                         </br><?php echo $row["description"]; ?>
                                                     </div> 
+                                                    <?php 
+                                                            
+                                                    try{ 
+                                                    if (check_if_user_has_already_liked($myid, $id, $db1)){     
+                                                        echo "<br/><br/> <form method='post' action='like.php'> 
+                                                        <input type='hidden' value='$id' name='id' id='id'>
+                                                        <input type='hidden' value='$myid' name='myid' id='myid'>    
+                                                        <input style='width:25%;color:black' type='submit'  value='Unlike'> <br/>
+                                                        </form>
+                                                    ";
+                                                    }
+                                                    else {
+                                                        echo "<br/><br/> <form method='post' action='like.php'> 
+                                                        <input type='hidden' value='$id' name='id' id='id'>
+                                                        <input type='hidden' value='$myid' name='myid' id='myid'>    
+                                                        <input style='width:15%;color:black' type='submit'  value='Like'> <br/>
+                                                        </form>"
+                                                    ;}
+                                                  
+                                                    
+                                                    }
+                                                        catch (Exception $e){echo $e;}?>
+                                                              
+                                                    
                                                 </div>
                                                 <?php
                                                     }
                                                 }
                                                 mysqli_close($db1);
+                                                
                                                 ?>
 
                                             </main>
