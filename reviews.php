@@ -5,16 +5,16 @@ if($_SESSION['username'] == "") {
 }
 ?>
 <?php
-    $db = mysqli_connect("localhost", "root", "", "review");
+    $db1 =  mysqli_connect("localhost", "root", "", "review");
     if(isset($_GET['submit'])){
         $title = $_GET['text'];
         $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
-        $result = mysqli_query($db, $sql);
-        if(!$result && !($result->num_rows > 0)){
-            $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
+        $result1 = mysqli_query($db1, $sql);
+        if(!$result1 && !($result->num_rows > 0)){
+            $result1 = mysqli_query($db1, "SELECT * FROM food_review ORDER BY rating DESC");
         }
     }else{
-        $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
+        $result1 = mysqli_query($db1, "SELECT * FROM food_review ORDER BY rating DESC");
     }
     //$data = $conn->query($db, $sql);
 ?>
@@ -127,9 +127,9 @@ if($_SESSION['username'] == "") {
 			</div>
 		</div>
 	</header>
-
+            
 	
-	<div id="fh5co-gallery" class="fh5co-section">
+	<div id="fh5co-slider" class="fh5co-section animate-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
@@ -138,43 +138,45 @@ if($_SESSION['username'] == "") {
 						<div class="col-md-6">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
 						</div>
+                                            <main>
+                                                <?php
+                                                if($result1 && $result1->num_rows > 0){ 
+                                                    while($row = mysqli_fetch_assoc($result1)){
+                                                ?>
+                                                <div class="card">
+                                                    <div class="image">
+                                                        <img src="images/<?php echo $row["image"]; ?>" alt="">
+                                                    </div>
+                                                    <div class="caption">
+                                                        <p class="rate">
+                                                            <?php
+                                                            $rating = $row["rating"];
+                                                            for($i=0; $i<$rating; $i++)
+                                                            {
+                                                            ?>
+                                                            <img src="images/star1.png">
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        <!-- comment -->
+                                                        <p class="food_name">Food name:
+                                                        <?php echo $row["foodname"];  ?>
+                                                        </br></br>Location: <?php echo $row["location"];  ?>
+                                                        </br></br>Description:
+                                                        </br><?php echo $row["description"]; ?>
+                                                    </div> 
+                                                </div>
+                                                <?php
+                                                    }
+                                                }
+                                                mysqli_close($db1);
+                                                ?>
+
+                                            </main>
 					</div>
+                                     
 				</div>
-                    <main>
-                        <?php
-                        if($result && $result->num_rows > 0){ 
-                            while($row = mysqli_fetch_assoc($result)){
-                        ?>
-                        <div class="card">
-                            <div class="image">
-                                <img src="images/<?php echo $row["image"]; ?>" alt="">
-                            </div>
-                            <div class="caption">
-                                <p class="rate">
-                                    <?php
-                                    $rating = $row["rating"];
-                                    for($i=0; $i<$rating; $i++)
-                                    {
-                                    ?>
-                                    <img src="images/star1.png">
-                                    <?php
-                                    }
-                                    ?>
-                                <!-- comment -->
-                                <p class="food_name">Food name:
-                                <?php echo $row["foodname"];  ?>
-                                </br></br>Location: <?php echo $row["location"];  ?>
-                                </br></br>Description:
-                                </br><?php echo $row["description"]; ?>
-                            </div> 
-                        </div>
-                        <?php
-                            }
-                        }
-                        mysqli_close($db);
-                        ?>
-                       
-                    </main>
+                                    
                             
                         
 			</div>
@@ -206,7 +208,10 @@ if($_SESSION['username'] == "") {
 		</div>
 	</div>
 	
-<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+
+       
+	
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/lewjunwei.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -236,7 +241,7 @@ if($_SESSION['username'] == "") {
 					<h4>Links</h4>
 					<ul class="fh5co-footer-links">
 						<li><a href="index.php">Home</a></li>
-						<li><a href="review.php">Review</a></li>
+						<li><a href="reviews.php">Review</a></li>
 						<li><a href="about.php">About</a></li>
                                                 <li><a href="contact.php">Upload Review</a></li>
                                                 <li><a href="login.php">Login/Signup</a></li>

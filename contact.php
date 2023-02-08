@@ -270,5 +270,3 @@ if($_SESSION['username'] == "") {
                 <script src="putPhoto.js"></script>
                 </body>
                 </html>
-
->>>>>>> 0c9694b66a4edffe59c7fff234060657a1e659b9
