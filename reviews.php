@@ -6,16 +6,16 @@ if($_SESSION['username'] == "") {
 $seshname = $_SESSION['username'];
 ?>
 <?php
-    $db = mysqli_connect("localhost", "root", "", "review");
+    $db1 =  mysqli_connect("localhost", "root", "", "review");
     if(isset($_GET['submit'])){
         $title = $_GET['text'];
         $sql = "SELECT * FROM food_review WHERE foodname LIKE '%$title%' OR location LIKE '%$title%'";
-        $result = mysqli_query($db, $sql);
-        if(!$result && !($result->num_rows > 0)){
-            $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
+        $result1 = mysqli_query($db1, $sql);
+        if(!$result1 && !($result->num_rows > 0)){
+            $result1 = mysqli_query($db1, "SELECT * FROM food_review ORDER BY rating DESC");
         }
     }else{
-        $result = mysqli_query($db, "SELECT * FROM food_review ORDER BY rating DESC");
+        $result1 = mysqli_query($db1, "SELECT * FROM food_review ORDER BY rating DESC");
     }
     //$data = $conn->query($db, $sql);
 ?>
@@ -146,8 +146,8 @@ $seshname = $_SESSION['username'];
 						</div>
                                             <main>
                                                 <?php
-                                                if($result && $result->num_rows > 0){ 
-                                                    while($row = mysqli_fetch_assoc($result)){
+                                                if($result1 && $result1->num_rows > 0){ 
+                                                    while($row = mysqli_fetch_assoc($result1)){
                                                 ?>
                                                 <div class="card">
                                                     <div class="image">
@@ -176,7 +176,7 @@ $seshname = $_SESSION['username'];
                                                 <?php
                                                     }
                                                 }
-                                                mysqli_close($db);
+                                                mysqli_close($db1);
                                                 ?>
 
                                             </main>

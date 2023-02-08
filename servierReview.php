@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
             $newImageName= uniqid();
             $newImageName .= '.' . $imageExtension;
 
-            move_uploaded_file($tmpName, 'images/' . $newImageName);
+            move_uploaded_file($tmpName, 'images/' . $newImageName);      
             $query = "INSERT INTO food_review (foodname, location, image, description, rating) VALUES('$foodname', '$location', '$newImageName', '$description', '$rating' )";
             mysqli_query($conn, $query);
             header("Location: contact.php?uploadsuccess");
