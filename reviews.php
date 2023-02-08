@@ -3,6 +3,7 @@ session_start();
 if($_SESSION['username'] == "") {
     header("Location: login_noLogin.php");
 }
+$seshname = $_SESSION['username'];
 ?>
 <?php
     $db1 =  mysqli_connect("localhost", "root", "", "review");
@@ -17,6 +18,11 @@ if($_SESSION['username'] == "") {
         $result1 = mysqli_query($db1, "SELECT * FROM food_review ORDER BY rating DESC");
     }
     //$data = $conn->query($db, $sql);
+?>
+
+<?php
+    $db2 = mysqli_connect("localhost", "root", "", "comments");
+    $result2 = mysqli_query($db2, "SELECT * FROM comment");
 ?>
 
 <!DOCTYPE HTML>
@@ -164,6 +170,7 @@ if($_SESSION['username'] == "") {
                                                         </br></br>Location: <?php echo $row["location"];  ?>
                                                         </br></br>Description:
                                                         </br><?php echo $row["description"]; ?>
+                                                        </br><input type="button" onclick="location.href='#redirectHere';" value="Comments Section" style="color:black; border-radius: 20px;">
                                                     </div> 
                                                 </div>
                                                 <?php
@@ -187,9 +194,89 @@ if($_SESSION['username'] == "") {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Testimony</h2>
+					<h2>General Comment Section</h2>
 					<div class="row">
 						<div class="col-md-6">
+                                                    <a id="redirectHere"></a>
+                                                   
+                                                    <div class="content" style="text-align: left;
+	background: white;
+	color: white;
+	padding: 5px;
+	width: 1100px;
+	border-radius: 10px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;">
+                                                        
+                                                            <?php
+                                                                if($result2 && $result2->num_rows > 0){
+                                                                      // output data of each row
+                                                                      while($row2 = $result2->fetch_assoc()) {
+                                                                          ?>
+                                                                     
+                                                        <h3 style="font-weight:bold; " ><?php echo $row2['name']; ?>:
+                                                                        <span style="margin-bottom: 15px;
+                                                                              width: 1050px;"><?php echo $row2['comment']; ?></span>
+                                                             <?php
+                                                                }}
+                                                                
+
+                                                            ?>
+                                                         
+                                                    </div>
+
+                                                    <div class="wrapper" style="	background: black;
+	border-radius: 10px;
+	width: 1100px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;">
+                                                        <form action="commentServer.php" method="post" class="form">
+                                                                <input style="color:black; background: #222222;
+	color: white;
+	font-size: 15px;
+	width: 1050px;
+	border-radius: 20px;
+	padding: 10px;
+	border: none;
+	outline: none;
+	margin-bottom: 10px;
+	margin-top: 20px;" type="text" class="name" name="name" placeholder="Name" value="<?php echo $seshname ?>">
+                                                                <br>
+                                                                <textarea style="color:black; background: #222222;
+	color: white;
+	font-size: 18px;
+	width:1050px;
+	border-radius: 20px;
+	padding: 10px;
+	border: none;
+	outline: none;
+	resize: none;" name="comment" cols="30" rows="5" class="message" placeholder="Message"></textarea>
+                                                                <br>
+                                                                <button type="submit" class="btn" style="	background: #222222;
+	color: white;
+	font-size: 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px;
+	width: 200px;
+	border-radius: 20px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	opacity: 0.8;
+	transition: 0.3s all ease;" name="post_commen">Post Comment</button>
+                                                        </form>
+                                                    </div>
+                                                    
+
+                                                  
+                                                    
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis.</p>
 						</div>
 					</div>
