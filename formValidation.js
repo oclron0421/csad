@@ -80,7 +80,26 @@ function valideUpload() {
     }
     
 }
+function stopcomplaining(){
+    var subject = document.getElementById("subject").value;
+    var description = document.getElementById("description").value;
 
+    
+    var can_submit = true;
+    if (subject == "") {
+    document.getElementById("subject_error").innerHTML = "Please choose a subject!";
+    document.getElementById("subject").focus();
+    return false;
+  }
+ else if (description == "") {
+    document.getElementById("desc_error").innerHTML = "Please enter Message!";
+    document.getElementById("description").focus();
+    return false;
+  }else{
+      return true;
+  }
+    
+}
   
 function validateLogin() {
     try {
