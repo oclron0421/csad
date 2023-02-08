@@ -147,21 +147,21 @@ if ($_SESSION['username'] == "") {
                                     <div class="col-md-12">
                                         <label for="name">Food</label>
                                         <input name="foodname" type="text" class="form-control" id="name">
-                                        <span id='foodname_error' style='color:red;margin-left:1.25em;text-decoration:underline;'></span>
+                                        <span id='foodname_error' style='color:red;text-decoration:underline;'></span>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label for="email">Location</label>
                                         <input name="location" id="location" type="text" class="form-control">
-                                        <span id='location_error' style='color:red;margin-left:1.25em;text-decoration:underline;'></span>
+                                        <span id='location_error' style='color:red;text-decoration:underline;'></span>
                                     </div>
                                 </div>
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label for="description">Food Description</label>
                                         <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-                                        <span id='description_error' style='color:red;margin-left:1.25em;text-decoration:underline;'></span>
+                                        <span id='description_error' style='color:red;text-decoration:underline;'></span>
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -174,7 +174,7 @@ if ($_SESSION['username'] == "") {
                                     <div class="col-md-12">
                                         <label for="image">Images</label>
                                         <input  type="file" class="form_control" id="image_input" name="image" accept="image/png, image/jpg">
-                                        <span id='image_error' style='color:red;margin-left:1.25em;text-decoration:underline;'></span>
+                                        <span id='image_error' style='color:red;text-decoration:underline;'></span>
                                         <div id="display_image"></div>
                                     </div>
                                 </div>

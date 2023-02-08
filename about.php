@@ -89,7 +89,6 @@ if ($_SESSION['username'] == "") {
                             </ul>
                         </div>
                     </div>
-
                 </div>
                 <!-- </div> -->
             </nav>
@@ -102,6 +101,44 @@ if ($_SESSION['username'] == "") {
                             <div class="display-t js-fullheight">
                                 <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
                                     <h1>About Food</h1>
+
+					
+						
+			    	</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+            <div>
+                <h1 style="color: white; font-family:'Satisfy', cursive";> Where to find us </h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7767420301248!2d103.77619776483169!3d1.3092316120691105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a602ff17c15%3A0xa9545dd23993859e!2sSingapore%20Polytechnic!5e0!3m2!1sen!2ssg!4v1675831519522!5m2!1sen!2ssg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                
+            
+            </div>
+	<div id="fh5co-featured-testimony" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fh5co-heading">
+					<h2>Contact our developers</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<h3 style="color: white;">Lucas koh :</h3>
+                                                        <p><a href="mailto:lucaskohyz@gmail.com">lucaskohyz@gmail.com</a></p>
+						</div>
+                                            <div class="col-md-6">
+							<h3 style="color: white;">Wong Du yuan :</h3>
+                                                        <p><a href="mailto:DUYUAN.21@ichat.sp.edu.sg">DUYUAN.21@ichat.sp.edu.sg</a></p>
+						</div>
+                                            <div class="col-md-6">
+							<h3 style="color: white;">Ron Ong :</h3>
+                                                        <p><a href="mailto:lucaskohyz@gmail.com">oclron04.21@ichat.sp.edu.sg    </a></p>
+						</div>
+                                            <div class="col-md-6">
+							<h3 style="color: white;">Lew Jun wei :</h3>
+                                                        <p><a href="mailto:JUNWEI.21@ichat.sp.edu.sg">JUNWEI.21@ichatmsp.edu.sg</a></p>
+						</div>
+					</div>
+				</div>
 
                                 </div>
                             </div>
