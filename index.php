@@ -7,7 +7,7 @@ if($_SESSION['username'] == "") {
 ?>
 <?php
     $db1 = mysqli_connect("localhost", "root", "", "review");
-    $result1 = mysqli_query($db1, "SELECT * FROM food_review WHERE rating=5");
+    $result1 = mysqli_query($db1, "SELECT * FROM food_review WHERE rating=4 OR rating =5 ORDER BY rating DESC ");
    
 ?>
 
