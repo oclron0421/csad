@@ -81,7 +81,7 @@
 							<li><a href="reviews.php">Reviews</a></li>
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
-                                                        <li class="active"><a href="login.php">Login/SignUp</a></li>
+                                                        <li class="active"><a href="login.php">Login/SignUp</a></li>                                                       
 						</ul>
 					</div>
 				</div>

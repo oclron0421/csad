@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-
+<?php session_start() ?>
 <html>
 	<head>
         <script>
@@ -135,7 +135,15 @@
 
 					</div>
 				</div>
-				
+                            <?php
+				if (isset($_SESSION["1email_error"])) {
+                                echo "<div style='font-size:30pt;color:red'>Invalid Email</div>";
+                                unset($_SESSION["1email_error"]); }
+                                if (isset($_SESSION["username_error"])) {
+                                echo "<div style='font-size:30pt;color:red'>Invalid Username</div>";
+                                unset($_SESSION["username_error"]); }
+                                
+                                ?>
 				<div class="^">
 					<form action="reset_password_func.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
 						<div class="row form-group">

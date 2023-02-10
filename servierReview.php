@@ -39,11 +39,17 @@ if (isset($_POST['submit'])) {
         }else{
             $newImageName= uniqid();
             $newImageName .= '.' . $imageExtension;
-
+            $likes = 0;
+            try {
             move_uploaded_file($tmpName, 'images/' . $newImageName);      
-            $query = "INSERT INTO food_review (foodname, location, image, description, rating) VALUES('$foodname', '$location', '$newImageName', '$description', '$rating' )";
+            $query = "INSERT INTO food_review (foodname, location, image, description, rating, likes) VALUES('$foodname', '$location', '$newImageName', '$description', '$rating', $likes )";
             mysqli_query($conn, $query);
             header("Location: contact.php?uploadsuccess");
+            }
+            catch (Exception $e) {
+                echo $e;
+            }
+            
 
 
         }

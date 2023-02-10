@@ -30,7 +30,9 @@ $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
             }            
         }
         if (!$name_found) {
-            header('Location:login_username_not_found.php');
+            session_start();
+            $_SESSION['username_error'] = true;
+            header('Location:login.php');
         }
         else {
         if (password_verify($password, $data[$user_index]["password"]))  {
@@ -38,6 +40,7 @@ $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
             $_SESSION['username'] = $data[$user_index]["username"];
             $_SESSION['email'] = $data[$user_index]["email"];
             $_SESSION['password'] = $data[$user_index]["password"];
+            $_SESSION['id'] = $data[$user_index]["id"];
             $_username = $data[$user_index]["username"];
             $_email = $data[$user_index]["email"];
             if ($_POST["remember"] == "checked") {
@@ -48,7 +51,9 @@ $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
             header('Location:login_success.php');
         }   
         else {
-            header('Location:login_password_invalid.php');
+            session_start();
+            $_SESSION['password_error'] = true;
+            header('Location:login.php');
         }    
         }
         

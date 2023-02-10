@@ -1,10 +1,15 @@
 <?php
+require 'like_func.php';
 session_start();
+$username = $_SESSION['username'];
 if ($_SESSION['username'] == "") {
-    header("Location: login_noLogin.php");
+    $_SESSION["login_error"] = true;
+    header("Location: login.php");
 }
+$myid = $_SESSION['id'];
 $seshname = $_SESSION['username'];
 ?>
+
 <?php
 $db1 = mysqli_connect("localhost", "root", "", "review");
 if (isset($_GET['submit'])) {
@@ -21,6 +26,7 @@ if (isset($_GET['submit'])) {
 ?>
 
 <?php
+
 $db2 = mysqli_connect("localhost", "root", "", "comments");
 $result2 = mysqli_query($db2, "SELECT * FROM comment");
 ?>
@@ -35,7 +41,29 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
         <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
         <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
         <meta name="author" content="freehtml5.co" />
-
+        <style> .tup {
+                margin-top: 30px;
+                margin-left: 100px;
+                background-image: url(images/tup.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height: 50px;
+                width: 50px;
+                border: none;
+                background-color: transparent;}
+                .tdown { 
+                margin-top: 30px;
+                margin-left: 100px;    
+                background-image: url(images/tdown.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height: 50px;
+                width: 50px;
+                border: none;
+                background-color: transparent;
+                }
+               
+             </style>
         <!-- 
         //////////////////////////////////////////////////////
 
@@ -74,6 +102,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
         <!-- Flexslider  -->
         <link rel="stylesheet" href="css/flexslider.css">
 
+
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -105,6 +134,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                 <li><a href="about.php">About</a></li>
                                 <li><a href="contact.php">Upload Review</a></li>
                                 <li><a href="login.php">Login/SignUp</a></li>
+    <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span>(".$username.")</span>&nbsp&nbsp&nbsp&nbsp <form action='signout.php' method='post' onsubmit='return true' style='display:inline'> <input style='text-decoration:underline;background:none;border:none;margin:0;padding:0;cursor:pointer' type='submit' value='Sign out'> </form> </span>"; ?>
                             </ul>
                         </div>
                     </div>
@@ -142,35 +172,63 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                             <h2>Our Reviews</h2>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+                                    <p>Here are the reviews posted by our fellow food lovers!</p>
                                 </div>
                                 <main>
                                     <?php
                                     if ($result1 && $result1->num_rows > 0) {
                                         while ($row = mysqli_fetch_assoc($result1)) {
                                             ?>
-                                            <div class="card">
-                                                <div class="image">
+                                            <div class="card" style="background-color:#cd5b45;border-color:#1e90ff;border-width:5px;border-radius: 10px;">
+                                                <div style="border-bottom:solid 5px #1e90ff" class="image">
                                                     <img src="images/<?php echo $row["image"]; ?>" alt="">
                                                 </div>
                                                 <div class="caption">
-                                                    <p class="rate">
+                                                    <div class="rate" style="border-color:#1e90ff;border-width:2px; border-style:solid; width:125px" >
                                                         <?php
+                                                        $id = $row['id'];
                                                         $rating = $row["rating"];
+                                                        $likes = $row["likes"];
                                                         for ($i = 0; $i < $rating; $i++) {
                                                             ?>
                                                             <img src="images/star1.png">
                                                             <?php
                                                         }
-                                                        ?>
-                                                        <!-- comment -->
-                                                    <p class="food_name">Food name:
-                                                        <?php echo $row["foodname"]; ?>
-                                                        </br></br>Location: <?php echo $row["location"]; ?>
-                                                        </br></br>Description:
-                                                        </br><?php echo $row["description"]; ?>
-                                                        </br><input type="button" onclick="location.href = '#redirectHere';" value="Comments Section" style="color:black; border-radius: 20px;">
-                                                </div> 
+
+                                                        for ($i = 0; $i < (5-$rating); $i++) {
+                                                            ?>
+                                                            <img src="images/star2.png">
+                                                            <?php
+                                                        }
+                                                        ?> </div>
+                                                    <div class="food_name">
+                                                        <?php echo "<div style='padding-top:5px; font-family: Georgia, serif; line-height: 2; color:black'>Food name: ".$row['foodname']."<br/>Location: ".$row["location"]."<br/>Description: ".$row["description"]."<br/>Likes: ".$likes."</div>";?>
+                                                                <input type="button" onclick="location.href = '#redirectHere';" value="Comments Section" style="color:black; border-radius: 10px; height:25px; line-height:20px">
+                                                    </div>
+                                                    </div> 
+                                                <?php
+                                                try {
+                                                    if (check_if_user_has_already_liked($myid, $id, $db1)) {
+                                                        echo " <form method='post' action='like.php'> 
+                                                        <input type='hidden' value='$id' name='id' id='id'>
+                                                        <input type='hidden' value='$myid' name='myid' id='myid'>    
+                                                        <input class='tdown' type='submit'  value=''> <br/>
+                                                        </form>
+                                                    ";
+                                                    } else {
+                                                        echo " <form method='post' action='like.php'> 
+                                                        <input type='hidden' value='$id' name='id' id='id'>
+                                                        <input type='hidden' value='$myid' name='myid' id='myid'>    
+                                                        <input class='tup' type='submit'  value=''> <br/>
+                                                        </form>"
+                                                        ;
+                                                    }
+                                                } catch (Exception $e) {
+                                                    echo $e;
+                                                }
+                                                ?>
+
+
                                             </div>
                                             <?php
                                         }
@@ -199,8 +257,8 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                     <a id="redirectHere"></a>
 
                                     <div class="content" style="text-align: left;
-                                         background: white;
-                                         color: white;
+                                         background: #ea272d;
+                                         color: #ea272d;
                                          padding: 5px;
                                          width: 1100px;
                                          border-radius: 10px;
@@ -395,9 +453,8 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                                                         bgColor: '#000',
                                                                         bgOpacity: .85
                                                                     })
-                                                                    .listen('[data-trigger="zoomerang"]')
+                                                                    .listen('[data-trigger="zoomerang"]');
         </script>
 
     </body>
 </html>
-
