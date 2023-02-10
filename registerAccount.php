@@ -122,10 +122,10 @@ function guidv4($data = null) {
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li><a href="index.php">Home</a></li>
-							<li><a href="menu.php">Menu</a></li>
-							<li><a href="reviews.php">Reviews</a></li>							<li class="active"><a href="login.php">Reservation</a></li>
+							<li><a href="reviews.php">Reviews</a></li>
 							<li><a href="about.php">About</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="contact.php">Upload Review</a></li>
+                                                        <li class="active"><a href="login.php">Login/SignUp</a></li>   
 						</ul>
 					</div>
 				</div>
@@ -151,44 +151,7 @@ function guidv4($data = null) {
 				
 				<div class="^">
                                     <div style="font-size:40;color:white;"> Account has been created </div>
-                                    <form action="registerAccount.php" method="POST" onsubmit="return validateForm();" name="form" id="form-wrap">
-						<div class="row form-group">
-                                                    <div class="col-md-12">
-                                                                    <label for="email">Email</label>
-                                                                    <span id="email_error" style="color:red;"></span>
-                                                                    <input type="text" class="form-control" id="email">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                                    <label for="username">Username</label>
-                                                                    <span id="username_error" style="color:red;"></span>
-                                                                    <input type="text" class="form-control" id="username">
-                                                    </div>
-
-                                                            <div class="col-md-12">
-                                                                    <label for="password">Password</label>
-                                                                    <span id="password_error" style="color:red;"></span>
-                                                                    <input type="password" class="form-control" id="password">
-                                                            </div>       
-                                                            <div class="col-md-12">
-                                                                    <label for="password_confirm">Confirm Password</label>
-                                                                    <span id="password_confirm_error" style="color:red;"></span>
-                                                                    <input type="password" class="form-control" id="password_confirm">
-                                                                    <input type="hidden" id="name_s" name="name_s">
-                                                                    <input type="hidden" id="email_s" name="email_s">
-                                                                    <input type="hidden" id="encrypt" name="encrypt">
-                                                            </div> 
-                                                </div>
-                                                    <div class="row form-group">
-                                                            <div class="col-md-12">
-                                                                    <input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
-                                                            </div>
-                                                    </div>
-                                               	
-					</form>
-                            </div>
-                    </div>
-            </div>
-
+                                    
 	
 	
 	
