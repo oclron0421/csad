@@ -1,4 +1,3 @@
-
 <?php
 require 'like_func.php';
 session_start();
@@ -173,7 +172,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                             <h2>Our Reviews</h2>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+                                    <p>Here are the reviews posted by our fellow food lovers!</p>
                                 </div>
                                 <main>
                                     <?php
@@ -258,8 +257,8 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                     <a id="redirectHere"></a>
 
                                     <div class="content" style="text-align: left;
-                                         background: white;
-                                         color: white;
+                                         background: #ea272d;
+                                         color: #ea272d;
                                          padding: 5px;
                                          width: 1100px;
                                          border-radius: 10px;
