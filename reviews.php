@@ -135,7 +135,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                 <li><a href="about.php">About</a></li>
                                 <li><a href="contact.php">Upload Review</a></li>
                                 <li><a href="login.php">Login/SignUp</a></li>
-                                <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span style='text-decoration:underline'>".$username."</span></span>"; ?>
+    <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span>(".$username.")</span>&nbsp&nbsp&nbsp&nbsp <form action='signout.php' method='post' onsubmit='return true' style='display:inline'> <input style='text-decoration:underline;background:none;border:none;margin:0;padding:0;cursor:pointer' type='submit' value='Sign out'> </form> </span>"; ?>
                             </ul>
                         </div>
                     </div>
@@ -454,9 +454,8 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                                                         bgColor: '#000',
                                                                         bgOpacity: .85
                                                                     })
-                                                                    .listen('[data-trigger="zoomerang"]')
+                                                                    .listen('[data-trigger="zoomerang"]');
         </script>
 
     </body>
 </html>
-

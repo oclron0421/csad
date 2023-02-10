@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_unset();
+session_destroy();
 header("Location: login.php");
 /* 
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

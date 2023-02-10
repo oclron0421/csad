@@ -128,33 +128,34 @@ if(isset($_COOKIE["password"])) {
                                 unset($_SESSION["password_error"]);
                             }
                             ?>
-                                
-				<div class="^">
-					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="email">Email</label>
-                                                                <span id="name_error" style="color:red;margin-left:1.25em;"></span>
-                                                              <?php echo' <input type="text" class="form-control" name="email" id="email" value='.$email.' >'?>
+                            <?php if (!(isset($_SESSION['username'])) ) {
+                                echo "
+				<div class='^'>
+					<form action='loginAccount.php' method='POST' id='form-wrap' onsubmit='return validateLogin();'>
+						<div class='row form-group'>
+							<div class='col-md-12'>
+								<label for='email'>Email</label>
+                                                                <span id='name_error' style='color:red;margin-left:1.25em;'></span>
+                                                               <input type='text' class='form-control' name='email' id='email' value='$email' >'
 							</div>
 						</div>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label for="password">Password</label>
-                                                                <span id="password_error" style="color:red;margin-left:1.25em;"></span>
-								<?php echo '<input type="password" class="form-control" name="password" id="password" value='.$password.'>'?>
+						<div class='row form-group'>
+							<div class='col-md-12'>
+								<label for='password'>Password</label>
+                                                                <span id='password_error' style='color:red;margin-left:1.25em;'></span>
+								'<input type='password' class='form-control' name='password' id='password' value='$password'>'
 							</div>
                                                     
 						</div>
-                                            <input style="margin-bottom: 20pt" type="checkbox" id="remember" name="remember" value="checked"> Remember Password?
+                                            <input style='margin-bottom: 20pt' type='checkbox' id='remember' name='remember' value='checked'> Remember Password?
                             
-						<div class="row form-group">
-							<div class="col-md-12">
-								<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form"> 
+						<div class='row form-group'>
+							<div class='col-md-12'>
+								<input type='submit' class='btn btn-primary btn-outline btn-lg' value='Submit Form'> 
 							</div>
                                                     <div>
-                                                        &nbsp;&nbsp;&nbsp;Don't have an account yet? <u><a href="register.php">Sign Up here!</a></a></u> <br/>
-                                                        &nbsp;&nbsp;&nbsp;Forgot your password? <u><a href="reset_password.php">Reset here</a></a></u>
+                                                        &nbsp;&nbsp;&nbsp;Don't have an account yet? <u><a href='register.php'>Sign Up here!</a></a></u> <br/>
+                                                        &nbsp;&nbsp;&nbsp;Forgot your password? <u><a href='reset_password.php'>Reset here</a></a></u>
                                                     </div>
 						</div>
 					</form>
@@ -163,7 +164,11 @@ if(isset($_COOKIE["password"])) {
 		</div>
 	</div>
 
-	
+                            ";}
+                            else {
+                                echo "<p  class='fh5co-section' style='font-size:40pt; text-align:center'> You're currently logged in as " .$_SESSION['username']."</p>";
+                            }
+?>
 	
 	
 	
