@@ -82,6 +82,7 @@
 							<li><a href="about.php">About</a></li>
 							<li><a href="contact.php">Upload Review</a></li>
                                                         <li class="active"><a href="login.php">Login/SignUp</a></li>
+                                                        <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span style='text-decoration:underline'>".$username."</span></span>"; ?>
 						</ul>
 					</div>
 				</div>

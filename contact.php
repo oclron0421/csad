@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
+$username = $_SESSION['username'];
 if ($_SESSION['username'] == "") {
-    header("Location: login_noLogin.php");
+    $_SESSION["login_error"] = true;
+    header("Location: login.php");
 }
 ?>
 <html>
@@ -104,6 +106,7 @@ if ($_SESSION['username'] == "") {
                                 <li><a href="about.php">About</a></li>
                                 <li class="active"><a href="contact.php">Upload Review</a></li>
                                 <li><a href="login.php">Login/SignUp</a></li>
+                                <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span style='text-decoration:underline'>".$username."</span></span>"; ?>
                             </ul>
                         </div>
                     </div>

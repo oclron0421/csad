@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 
 <?php 
+session_start();
 $email = "";
 $password = "";
 if(isset($_COOKIE["email"])) {
@@ -113,7 +114,21 @@ if(isset($_COOKIE["password"])) {
 
 					</div>
 				</div>
-				
+                            <?php
+                            if (isset($_SESSION["login_error"])) {
+                                echo "<div style='font-size:30pt;color:red'>Account Required</div>";
+                                unset($_SESSION["login_error"]);
+                            }
+                            if (isset($_SESSION["username_error"])) {
+                                echo "<div style='font-size:30pt;color:red'>Invalid Email</div>";
+                                unset($_SESSION["username_error"]);
+                            }
+                            if (isset($_SESSION["password_error"])) {
+                                echo "<div style='font-size:30pt;color:red'>Invalid Password</div>";
+                                unset($_SESSION["password_error"]);
+                            }
+                            ?>
+                                
 				<div class="^">
 					<form action="loginAccount.php" method="POST" id="form-wrap" onsubmit="return validateLogin();">
 						<div class="row form-group">

@@ -15,9 +15,20 @@ function add_user_like_to_post($myid, $pid, $conn) {
     $query = "SELECT users FROM like_review WHERE postID=".$pid."; ";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_all($result);
+    if(($row[0][0]) != "") {
     $users = $row[0][0].".".$myid;
+    }
+    else 
+        $users = $myid;
     $query2 = "UPDATE like_review SET users="."'".$users."'"." WHERE postID=".$pid;
     mysqli_query($conn, $query2);
+    $query3 = "SELECT likes FROM food_review WHERE id=".$pid."; ";
+    $result1 = mysqli_query($conn, $query3);
+    $row2 = mysqli_fetch_assoc($result1);
+    $likes = $row2['likes'] + 1;
+    $query4 =  "UPDATE food_review SET likes='$likes'  WHERE id=".$pid.";";
+    mysqli_query($conn, $query4);
+    
     
 }
 
@@ -31,7 +42,7 @@ function check_if_user_has_already_liked($myid, $pid, $conn) {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_all($result);
     if(isset($row[0][0])) {
-    $user_array = explode(",", $row[0][0]);
+    $user_array = explode(".", $row[0][0]);
     foreach ($user_array as $user) {
         if ($user == $myid)
             return true;
@@ -50,14 +61,21 @@ function remove_user_like_from_post($myid, $pid, $conn) {
     $new_userlist = "";
     if(isset($row[0][0])) {
             
-    $user_array = explode(",", $row[0][0]);
+    $user_array = explode(".", $row[0][0]);
     foreach ($user_array as $user) {
         if ($user != $myid)
-            $new_userlist = $new_userlist. ".". $user ;                  
+            $new_userlist = $new_userlist. ".". $user ;  
+    }    
    
     
     $query2 = "UPDATE like_review SET users='$new_userlist' WHERE postID=".$pid;
     mysqli_query($conn, $query2);
+    $query3 = "SELECT likes FROM food_review WHERE id=".$pid."; ";
+    $result1 = mysqli_query($conn, $query3);
+    $row2 = mysqli_fetch_assoc($result1);
+    $likes = $row2['likes'] - 1;
+    $query4 =  "UPDATE food_review SET likes='$likes'  WHERE id=".$pid.";";
+    mysqli_query($conn, $query4);
     }
-    }
+  
 }

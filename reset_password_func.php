@@ -30,7 +30,10 @@ $user_index;
             }            
         }
         if (!$name_found) {
-            header('Location:reset_password_invalid_name.php');
+            session_start();
+            $_SESSION['1email_error'] = true;
+            
+          header('Location:reset_password.php');
         }
         else {
         if ($username == $data[$user_index]["username"])  {
@@ -38,7 +41,9 @@ $user_index;
             header('Location:reset_password_successful.php');
         }   
         else {
-            header('Location:reset_password_invalid_email.php');
+            session_start();
+            $_SESSION['username_error'] = true;
+            header('Location:reset_password.php');
         }    
         }
         
@@ -56,7 +61,7 @@ $user_index;
     
     function reset_password($id, $email, $username) {
         $password = uniqid();
-        mail($email, "Reset Password", "Your password is ".$password);
+        //mail($email, "Reset Password", "Your password is ".$password);
         $password = password_hash($password, PASSWORD_DEFAULT);
         $ASTRA_DB_ID = "617ced2f-7eb2-46b9-9b01-28a1fd2f4e2d";
         $ASTRA_DB_REGION = "asia-south1";
