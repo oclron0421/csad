@@ -1,3 +1,4 @@
+
 <?php
 require 'like_func.php';
 session_start();
@@ -26,6 +27,7 @@ if (isset($_GET['submit'])) {
 ?>
 
 <?php
+
 $db2 = mysqli_connect("localhost", "root", "", "comments");
 $result2 = mysqli_query($db2, "SELECT * FROM comment");
 ?>
@@ -100,6 +102,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
 
         <!-- Flexslider  -->
         <link rel="stylesheet" href="css/flexslider.css">
+
 
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
@@ -192,6 +195,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                                             <img src="images/star1.png">
                                                             <?php
                                                         }
+
                                                         for ($i = 0; $i < (5-$rating); $i++) {
                                                             ?>
                                                             <img src="images/star2.png">

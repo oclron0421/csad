@@ -118,34 +118,7 @@ if ($_SESSION['username'] == "") {
                 
             
             </div>
-	<div id="fh5co-featured-testimony" class="fh5co-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 fh5co-heading">
-					<h2>Contact our developers</h2>
-					<div class="row">
-						<div class="col-md-6">
-							<h3 style="color: white;">Lucas koh :</h3>
-                                                        <p><a href="mailto:lucaskohyz@gmail.com">lucaskohyz@gmail.com</a></p>
-						</div>
-                                            <div class="col-md-6">
-							<h3 style="color: white;">Wong Du yuan :</h3>
-                                                        <p><a href="mailto:DUYUAN.21@ichat.sp.edu.sg">DUYUAN.21@ichat.sp.edu.sg</a></p>
-						</div>
-                                            <div class="col-md-6">
-							<h3 style="color: white;">Ron Ong :</h3>
-                                                        <p><a href="mailto:lucaskohyz@gmail.com">oclron04.21@ichat.sp.edu.sg    </a></p>
-						</div>
-                                            <div class="col-md-6">
-							<h3 style="color: white;">Lew Jun wei :</h3>
-                                                        <p><a href="mailto:JUNWEI.21@ichat.sp.edu.sg">JUNWEI.21@ichatmsp.edu.sg</a></p>
-						</div>
-					</div>
-				</div>
-
-                                </div>
-                            </div>
-                        </div>
+	
                     </div>
                 </div>
             </header>
