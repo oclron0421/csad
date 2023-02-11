@@ -138,13 +138,13 @@ if($_SESSION['username'] == "") {
         <!-- dynamic announcements can go here -->
 	<div id="fh5co-featured-menu" class="fh5co-section">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Today's Hot Deals!</h2>
+					<h2 style="text-align: center;">Today's Hot Deals!</h2>
 
 					</div>
 				</div>
 				
 				<div >
-					<div >
+					<div style="border:solid 3px whitesmoke;padding:-10px;" >
 						<?php include 'bannerCode.php'; ?>
 					</div>
 				</div>
@@ -187,8 +187,8 @@ if($_SESSION['username'] == "") {
 				</div>
 				<div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
 					<blockquote style="padding-top: 20dp" >
-						<p> &ldquo; Put your head down and work hard. Never wait for things to happen, make them happen for yourself through hard graft and not giving up. &rdquo;</p>
-						<p class="author"><cite>&mdash; Gordon Ramsay</cite></p>
+						<p> &ldquo; Food taste great when reviewed,upload yours now~ &rdquo;</p>
+						<p class="author"><cite>&mdash; FoodGasm</cite></p>
 					</blockquote>
 				</div>
 			</div>
@@ -199,11 +199,11 @@ if($_SESSION['username'] == "") {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Our Reviews</h2>
+					<h2 style="text-align: center;">Our Top Reviews</h2>
 					<div class="row">
 						<div class="col-md-6">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
-						</div>
+                                                    <p>See our top rated reviews for the week</p>
+                                                </div>  
                                             <main>
                                                 <?php
                                                 if($result1 && $result1->num_rows > 0){ 

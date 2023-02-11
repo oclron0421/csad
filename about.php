@@ -18,7 +18,7 @@ if ($_SESSION['username'] == "") {
         <meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
         <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
         <meta name="author" content="freehtml5.co" />
-
+          
         <!-- 
         //////////////////////////////////////////////////////
 
@@ -61,12 +61,20 @@ if ($_SESSION['username'] == "") {
 
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-
+        <style>.white{
+            color:white;
+            .logout-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color:white;
+    border-radius: 5px;
+  }}
+            </style>
         <!-- FOR IE9 below -->
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-
+       
     </head>
     <body>
 
@@ -87,8 +95,8 @@ if ($_SESSION['username'] == "") {
                                 <li class="active"><a href="about.php">About</a></li>
                                 <li><a href="contact.php">Upload Review</a></li>
                                 <li><a href="login.php">Login/SignUp</a></li>
-                                <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span>(" . $username . ")</span>&nbsp&nbsp&nbsp&nbsp <form action='signout.php' method='post' onsubmit='return true' style='display:inline'> <input style='text-decoration:underline;background:none;border:none;margin:0;padding:0;cursor:pointer' type='submit' value='Sign out'> </form> </span>"; ?>
-                            </ul>
+  <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span>(" . $username . ")</span>&nbsp&nbsp&nbsp&nbsp <form action='signout.php' method='post' onsubmit='return true' style='display:inline'> <input style='text-decoration:underline;background:none;border:none;margin:0;padding:0;cursor:pointer' type='submit' value='Sign out'> </form> </span>"; ?>
+                        </ul>
 
                         </div>
                     </div>
@@ -129,10 +137,10 @@ if ($_SESSION['username'] == "") {
                 <div class="col-md-6 col-md-pull-4 img-wrap animate-box" data-animate-effect="fadeInLeft">
                     <img src="images/hero_1.jpeg" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
                 </div>
-                <div class="col-md-5 col-md-push-1 animate-box">
+                <div class="col-md-5 col-md-push-1 animate-box bounceIn">
                     <div class="section-heading">
-                        <h2>Foodgasm</h2>
-                        <p> This app aims to help users upload,share and rate food reviews</p>
+                        <h2 >Foodgasm</h2>
+                        <p style="color:white;"> This app aims to help users upload,share and rate food reviews</p>
 
 
                         <p><a href="#" class="btn btn-primary btn-outline">Our History</a></p>
@@ -158,7 +166,7 @@ if ($_SESSION['username'] == "") {
 
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Went from shoppee concept app to a food review app..</p>
+                                    <p class="white">Went from shoppee concept app to a food review app..</p>
                                 </div>
                             </div>
                         </li>
@@ -166,10 +174,10 @@ if ($_SESSION['username'] == "") {
                             <div class="timeline-badge"><i class="icon-genius"></i></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3 class="timeline-title">UI UX check</h3>
+                                    <h3 class="timeline-title ">UI UX check</h3>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Ironed out the front end of the app.</p>
+                                    <p class="white">Ironed out the front end of the app.</p>
                                 </div>
                             </div>
                         </li>
@@ -180,7 +188,7 @@ if ($_SESSION['username'] == "") {
                                     <h3 class="timeline-title">Finalisation</h3>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Finished backend and here you have the app</p>
+                                    <p class="white">Finished backend and here you have the app</p>
                                 </div>
                             </div>
                         </li>
@@ -192,28 +200,34 @@ if ($_SESSION['username'] == "") {
             </div>
         </div>
     </div>
-
+            <style>
+.email-hover:hover {
+    color: #007bff;
+    transition: 0.3s ease-in-out;
+    text-decoration: underline;
+}
+</style>
     <div id="fh5co-featured-testimony" class="fh5co-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 fh5co-heading">
+                <div class="col-md-12 fh5co-heading text-center">
                     <h2>Contact our developers</h2>
                     <div class="row">
                         <div class="col-md-6">
-                            <h3 style="color: white;">Lucas koh :</h3>
-                            <p><a href="mailto:lucaskohyz@gmail.com">lucaskohyz@gmail.com</a></p>
+                            <h3 style="color: white; text-decoration: underline;">Lucas koh :</h3>
+                            <p><a href="mailto:Lucaskyz04.21@ichat.sp.edu.sg" class="email-hover">Lucaskyz04.21@ichat.sp.edu.sg</a></p>
                         </div>
                         <div class="col-md-6">
-                            <h3 style="color: white;">Wong Du yuan :</h3>
-                            <p><a href="mailto:DUYUAN.21@ichat.sp.edu.sg">DUYUAN.21@ichat.sp.edu.sg</a></p>
+                            <h3 style="color: white;text-decoration: underline;">Wong Du yuan :</h3>
+                            <p><a href="mailto:DUYUAN.21@ichat.sp.edu.sg" class="email-hover">DUYUAN.21@ichat.sp.edu.sg</a></p>
                         </div>
                         <div class="col-md-6">
-                            <h3 style="color: white;">Ron Ong :</h3>
-                            <p><a href="mailto:lucaskohyz@gmail.com">oclron04.21@ichat.sp.edu.sg    </a></p>
+                            <h3 style="color: white;text-decoration: underline;">Ron Ong :</h3>
+                            <p><a href="mailto:lucaskohyz@gmail.com" class="email-hover">oclron04.21@ichat.sp.edu.sg    </a></p>
                         </div>
                         <div class="col-md-6">
-                            <h3 style="color: white;">Lew Jun wei :</h3>
-                            <p><a href="mailto:JUNWEI.21@ichat.sp.edu.sg">JUNWEI.21@ichatmsp.edu.sg</a></p>
+                            <h3 style="color: white; text-decoration: underline;">Lew Jun wei :</h3>
+                            <p><a href="mailto:JUNWEI.21@ichat.sp.edu.sg" class="email-hover">JUNWEI.21@ichatmsp.edu.sg</a></p>
                         </div>
                     </div>
                 </div>
@@ -283,7 +297,7 @@ if ($_SESSION['username'] == "") {
 
 
 
-        <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/lewjunwei.jpeg);" data-stellar-background-ratio="0.5">
+        <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/tam2.jpeg);" data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row animate-box">

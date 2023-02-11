@@ -1,9 +1,10 @@
-<!DOCTYPE HTML>
+  <!DOCTYPE HTML>
 
 <?php 
 session_start();
 $email = "";
 $password = "";
+
 if(isset($_COOKIE["email"])) {
     $email = $_COOKIE["email"];
 }
@@ -109,7 +110,7 @@ if(isset($_COOKIE["password"])) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 fh5co-heading animate-box">
-					<h2>Login</h2>
+					<h2 style ="text-align: center; margin-top: 50dp">Login</h2>
 					<div class="row">
 
 					</div>
@@ -117,6 +118,7 @@ if(isset($_COOKIE["password"])) {
                             <?php
                             if (isset($_SESSION["login_error"])) {
                                 echo "<div style='font-size:30pt;color:red'>Account Required</div>";
+                                echo '<script>alert("Please login with your account")</script>';
                                 unset($_SESSION["login_error"]);
                             }
                             if (isset($_SESSION["username_error"])) {
@@ -131,7 +133,7 @@ if(isset($_COOKIE["password"])) {
                             <?php if (!(isset($_SESSION['username'])) ) {
                                 echo "
 				<div class='^'>
-					<form action='loginAccount.php' method='POST' id='form-wrap' onsubmit='return validateLogin();'>
+					<form action='loginAccount.php' method='POST' id='form-wrap' onsubmit='return validateLogin(); '>
 						<div class='row form-group'>
 							<div class='col-md-12'>
 								<label for='email'>Email</label>
@@ -153,7 +155,7 @@ if(isset($_COOKIE["password"])) {
 							<div class='col-md-12'>
 								<input type='submit' class='btn btn-primary btn-outline btn-lg' value='Submit Form'> 
 							</div>
-                                                    <div>
+                                                    <div>   
                                                         &nbsp;&nbsp;&nbsp;Don't have an account yet? <u><a href='register.php'>Sign Up here!</a></a></u> <br/>
                                                         &nbsp;&nbsp;&nbsp;Forgot your password? <u><a href='reset_password.php'>Reset here</a></a></u>
                                                     </div>

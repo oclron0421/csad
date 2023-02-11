@@ -26,7 +26,6 @@ if (isset($_GET['submit'])) {
 ?>
 
 <?php
-
 $db2 = mysqli_connect("localhost", "root", "", "comments");
 $result2 = mysqli_query($db2, "SELECT * FROM comment");
 ?>
@@ -50,10 +49,11 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                 height: 50px;
                 width: 50px;
                 border: none;
-                background-color: transparent;}
-                .tdown { 
+                background-color: transparent;
+            }
+            .tdown {
                 margin-top: 30px;
-                margin-left: 100px;    
+                margin-left: 100px;
                 background-image: url(images/tdown.png);
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
@@ -61,9 +61,9 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                 width: 50px;
                 border: none;
                 background-color: transparent;
-                }
-               
-             </style>
+            }
+
+        </style>
         <!-- 
         //////////////////////////////////////////////////////
 
@@ -134,7 +134,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                 <li><a href="about.php">About</a></li>
                                 <li><a href="contact.php">Upload Review</a></li>
                                 <li><a href="login.php">Login/SignUp</a></li>
-    <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span>(".$username.")</span>&nbsp&nbsp&nbsp&nbsp <form action='signout.php' method='post' onsubmit='return true' style='display:inline'> <input style='text-decoration:underline;background:none;border:none;margin:0;padding:0;cursor:pointer' type='submit' value='Sign out'> </form> </span>"; ?>
+                                <?php echo "<span style='font-size:16pt;font-weight:bold;'> &nbsp&nbsp&nbsp&nbsp&nbspLogged in as <span>(" . $username . ")</span>&nbsp&nbsp&nbsp&nbsp <form action='signout.php' method='post' onsubmit='return true' style='display:inline'> <input style='text-decoration:underline;background:none;border:none;margin:0;padding:0;cursor:pointer' type='submit' value='Sign out'> </form> </span>"; ?>
                             </ul>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                     if ($result1 && $result1->num_rows > 0) {
                                         while ($row = mysqli_fetch_assoc($result1)) {
                                             ?>
-                                            <div class="card" style="background-color:#cd5b45;border-color:#1e90ff;border-width:5px;border-radius: 10px;">
+                                            <div class="card" style="background-color:#FFFFFF;border-color:#1e90ff;border-width:5px;border-radius: 10px;">
                                                 <div style="border-bottom:solid 5px #1e90ff" class="image">
                                                     <img src="images/<?php echo $row["image"]; ?>" alt="">
                                                 </div>
@@ -195,17 +195,17 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                                             <?php
                                                         }
 
-                                                        for ($i = 0; $i < (5-$rating); $i++) {
+                                                        for ($i = 0; $i < (5 - $rating); $i++) {
                                                             ?>
                                                             <img src="images/star2.png">
                                                             <?php
                                                         }
                                                         ?> </div>
                                                     <div class="food_name">
-                                                        <?php echo "<div style='padding-top:5px; font-family: Georgia, serif; line-height: 2; color:black'>Food name: ".$row['foodname']."<br/>Location: ".$row["location"]."<br/>Description: ".$row["description"]."<br/>Likes: ".$likes."</div>";?>
-                                                                <input type="button" onclick="location.href = '#redirectHere';" value="Comments Section" style="color:black; border-radius: 10px; height:25px; line-height:20px">
+                                                        <?php echo "<div style='padding-top:5px; font-family: Georgia, serif; line-height: 2; color:black'>Food name: " . $row['foodname'] . "<br/>Location: " . $row["location"] . "<br/>Description: " . $row["description"] . "<br/>Likes: " . $likes . "</div>"; ?>
+                                                        <input type="button" onclick="location.href = '#redirectHere';" value="Comments Section" style="color:black; border-radius: 10px; height:25px; line-height:20px">
                                                     </div>
-                                                    </div> 
+                                                </div> 
                                                 <?php
                                                 try {
                                                     if (check_if_user_has_already_liked($myid, $id, $db1)) {
@@ -252,6 +252,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                     <div class="row">
                         <div class="col-md-12 fh5co-heading animate-box">
                             <h2>General Comment Section</h2>
+                            <p  style="color:white;">Post your comments for it to be dynamically featured!!!</p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <a id="redirectHere"></a>
@@ -333,20 +334,49 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
 
 
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis.</p>
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-5 animate-box img-to-responsive animate-box" data-animate-effect="fadeInLeft">
-                            <img src="images/person_1.jpg" alt="">
+                            <img src="images/gordon_ramsay.jpeg" width="400" height="500"alt="">
                         </div>
                         <div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
                             <blockquote>
-                                <p> &ldquo; Quantum ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam. &rdquo;</p>
-                                <p class="author"><cite>&mdash; Jane Smith</cite></p>
+                                <p>
+                                    <?php
+                                    // Connect to database
+                                    $servername = "localhost";
+                                    $username = "root";
+                                    $password = "";
+                                    $dbname = "comments";
+
+                                    $conn = new mysqli($servername, $username, $password, $dbname);
+                                    if ($conn->connect_error) {
+                                        die("Connection failed: " . $conn->connect_error);
+                                    }
+
+                                    // Retrieve a random comment from the database
+                                    $sql = "SELECT * FROM comment ORDER BY RAND() LIMIT 1";
+                                    $result = $conn->query($sql);
+
+                                    if ($result->num_rows > 0) {
+                                        // Display the comment
+                                        $row = $result->fetch_assoc();
+                                        echo "&ldquo;" . $row['comment'] . "&rdquo;";
+                                        echo "<p class='author'><cite>&mdash; " . $row['name'] . "</cite></p>";
+                                    } else {
+                                        // No comments found
+                                        echo "No comments found.";
+                                    }
+
+                                    $conn->close();
+                                    ?>
+                                </p>
                             </blockquote>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -354,7 +384,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
 
 
 
-            <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/lewjunwei.jpeg);" data-stellar-background-ratio="0.5">
+            <div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/tam2.jpeg);" data-stellar-background-ratio="0.5">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row animate-box">
@@ -446,14 +476,14 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
         <script src="js/main.js"></script>
 
         <script>
-                                                            Zoomerang
-                                                                    .config({
-                                                                        maxHeight: 600,
-                                                                        maxWidth: 900,
-                                                                        bgColor: '#000',
-                                                                        bgOpacity: .85
-                                                                    })
-                                                                    .listen('[data-trigger="zoomerang"]');
+                                                    Zoomerang
+                                                            .config({
+                                                                maxHeight: 600,
+                                                                maxWidth: 900,
+                                                                bgColor: '#000',
+                                                                bgOpacity: .85
+                                                            })
+                                                            .listen('[data-trigger="zoomerang"]');
         </script>
 
     </body>

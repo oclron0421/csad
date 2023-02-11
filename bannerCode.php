@@ -17,7 +17,7 @@
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
         echo '<div style="background-color: #FFFFF; height: 100vh; text-align: center;">';
-        echo '<img src="' . $row['image_url'] . '" style="width: 100%; height: 100%; object-fit: cover;" />';
+        echo '<img src="' . $row['image_url'] . '" style="width: 70%; height: 70%; object-fit: cover;" />';
         echo '</div>';
     } else {
         echo "0 results";

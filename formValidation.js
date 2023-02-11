@@ -39,6 +39,7 @@ function validateForm() {
         document.form.encrypt.value = encrypt_rsa(password);
         document.form.name_s.value = username;
         document.form.email_s.value = email;
+        
         return true;
     }
     else {
@@ -127,6 +128,7 @@ function validateLogin() {
         document.write(error.message);
     }
     if (can_submit) {
+        window.alert("Login successful");
         return true;
     }
     else 
