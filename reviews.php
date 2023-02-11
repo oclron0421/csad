@@ -179,7 +179,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                     if ($result1 && $result1->num_rows > 0) {
                                         while ($row = mysqli_fetch_assoc($result1)) {
                                             ?>
-                                            <div class="card" style="background-color:#FFFFFF;border-color:#1e90ff;border-width:5px;border-radius: 10px;">
+                                            <div class="card" style="background-color:#FFFFFF;border-width:5px;border-radius: 10px;">
                                                 <div style="border-bottom:solid 5px #1e90ff" class="image">
                                                     <img src="images/<?php echo $row["image"]; ?>" alt="">
                                                 </div>
@@ -253,12 +253,13 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                         <div class="col-md-12 fh5co-heading animate-box">
                             <h2>General Comment Section</h2>
                             <p  style="color:white;">Post your comments for it to be dynamically featured!!!</p>
+                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <a id="redirectHere"></a>
 
                                     <div class="content" style="text-align: left;
-                                         background: #ea272d;
+                                         background-color: white;
                                          color: #ea272d;
                                          padding: 5px;
                                          width: 1100px;
@@ -303,7 +304,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                                    margin-bottom: 10px;
                                                    margin-top: 20px;" type="text" class="name" name="name" placeholder="Name" value="<?php echo $seshname ?>">
                                             <br>
-                                            <textarea style="color:black; background: #222222;
+                                            <textarea style="color:black; background-color: white;
                                                       color: white;
                                                       font-size: 18px;
                                                       width:1050px;
