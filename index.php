@@ -254,22 +254,21 @@ if($_SESSION['username'] == "") {
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Events</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, consequatur. Aliquam quaerat pariatur repellendus veniam nemo, saepe, culpa eius aspernatur cumque suscipit quae nobis illo tempora. Eum veniam necessitatibus, blanditiis facilis quidem dolore! Dolorem, molestiae.</p>
-				</div>
+					<h2>Sponsored reviews</h2>
+                                        <p>Try the sponsored reviews! Rest assured, it is tried and tested by our very own team!</p>
 			</div>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/gallery_1.jpeg);"></a>
+						<a href="https://www.papis-tacos.com/" class="blog-bg" style="background-image: url(images/gallery_1.jpeg);"></a>
 						<div class="blog-text">
-							<span class="posted_on">Feb. 15th 2016</span>
-							<h3><a href="#">Photoshoot On The Street</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<span class="posted_on">Feb. 15th 2023</span>
+							<h3><a href="#">Mexican food</a></h3>
+							<p>Give papi tacos a shot as your taste the papi in their taci!</p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li style="font-weight: bold;"><i class="icon-heart2"></i>4/5</li>
+								
+								<li><a href="https://www.papis-tacos.com/">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div> 
 					</div>
@@ -278,28 +277,28 @@ if($_SESSION['username'] == "") {
 					<div class="fh5co-blog animate-box">
 						<a href="#" class="blog-bg" style="background-image: url(images/gallery_2.jpeg);"></a>
 						<div class="blog-text">
-							<span class="posted_on">Feb. 15th 2016</span>
-							<h3><a href="#">Surfing at Philippines</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<span class="posted_on">Feb. 16th 2023</span>
+							<h3><a href="https://wolfgangssteakhouse.sg/">Wolfgang steakhouse</a></h3>
+							<p>Give the renowned wolfgang puck steakhouse a shot! Simply delectable</p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+								<li style="font-weight: bold;"><i class="icon-heart2"></i>5/5</li>
+						
+								<li><a href="https://wolfgangssteakhouse.sg/">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div> 
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/gallery_3.jpeg);"></a>
+						<a href="https://www.randblab.com/restaurants-bars/25-degrees-singapore/ class="blog-bg" style="background-image: url(images/gallery_3.jpeg);"></a>
 						<div class="blog-text">
-							<span class="posted_on">Feb. 15th 2016</span>
-							<h3><a href="#">Focus On Uderwater</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<span class="posted_on">Jan. 15th 2023/span>
+							<h3><a href="#">25 Degrees</a></h3>
+							<p>Mouth watering burgers!Our personal favourite is the buttermilk ;)</p>
 							<ul class="stuff">
-								<li><i class="icon-heart2"></i>1.2K</li>
-								<li><i class="icon-eye2"></i>2K</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+                                                            <li style="font-weight: bold;"><i class="icon-heart2" style="font-weight: bold;"></i>5/5</li>
+								
+								<li><a href="https://www.randblab.com/restaurants-bars/25-degrees-singapore/">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
 						</div> 
 					</div>
