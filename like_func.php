@@ -35,6 +35,12 @@ function add_user_like_to_post($myid, $pid, $conn) {
 function create_row_for_post_then_add_user_like($myid, $pid, $conn) {
     $query = "INSERT INTO like_review (postID, users) VALUES ('$pid', '$myid')";
     mysqli_query($conn, $query);
+    $query3 = "SELECT likes FROM food_review WHERE id=".$pid."; ";
+    $result1 = mysqli_query($conn, $query3);
+    $row2 = mysqli_fetch_assoc($result1);
+    $likes = $row2['likes'] + 1;
+    $query4 =  "UPDATE food_review SET likes='$likes'  WHERE id=".$pid.";";
+    mysqli_query($conn, $query4);
 }
 
 function check_if_user_has_already_liked($myid, $pid, $conn) {
