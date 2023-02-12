@@ -305,7 +305,7 @@ $result2 = mysqli_query($db2, "SELECT * FROM comment");
                                                    margin-top: 20px;" type="text" class="name" name="name" placeholder="Name" value="<?php echo $seshname ?>">
                                             <br>
                                             <textarea style="color:black; background-color: white;
-                                                      color: white;
+                                                      
                                                       font-size: 18px;
                                                       width:1050px;
                                                       border-radius: 20px;

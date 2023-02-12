@@ -156,7 +156,7 @@ if ($_SESSION['username'] == "") {
                 <div class="col-md-12 col-md-offset-0">
                     <ul class="timeline animate-box">
                         <li class="timeline-heading text-center animate-box">
-                            <div><h3>Our Experience</h3></div>
+                            <div><h3 id="historyyy">Our Experience</h3></div>
                         </li>
                         <li class="animate-box timeline-unverted">
                             <div class="timeline-badge"><i class="icon-genius"></i></div>

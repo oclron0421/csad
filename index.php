@@ -129,7 +129,7 @@ if($_SESSION['username'] == "") {
 						<h2>Our Food review</h2>
 						<p>Share the hidden gems of food in Singapore in our website!</p>
                                                 <p>Review and share them!</p>
-						<p><a href="#" class="btn btn-primary btn-outline">Our History</a></p>
+						<p><a href="about.php#historyyy" class="btn btn-primary btn-outline">Our History</a></p>
 					</div>
 				</div>
 			</div>
@@ -275,7 +275,7 @@ if($_SESSION['username'] == "") {
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/gallery_2.jpeg);"></a>
+						<a href="https://wolfgangssteakhouse.sg/" class="blog-bg" style="background-image: url(images/gallery_2.jpeg);"></a>
 						<div class="blog-text">
 							<span class="posted_on">Feb. 16th 2023</span>
 							<h3><a href="https://wolfgangssteakhouse.sg/">Wolfgang steakhouse</a></h3>
@@ -290,13 +290,13 @@ if($_SESSION['username'] == "") {
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="https://www.randblab.com/restaurants-bars/25-degrees-singapore/ class="blog-bg" style="background-image: url(images/gallery_3.jpeg);"></a>
+						<a href="https://www.randblab.com/restaurants-bars/25-degrees-singapore/"class="blog-bg" style="background-image: url(images/gallery_3.jpeg);"></a>
 						<div class="blog-text">
 							<span class="posted_on">Jan. 15th 2023/span>
 							<h3><a href="#">25 Degrees</a></h3>
 							<p>Mouth watering burgers!Our personal favourite is the buttermilk ;)</p>
 							<ul class="stuff">
-                                                            <li style="font-weight: bold;"><i class="icon-heart2" style="font-weight: bold;"></i>5/5</li>
+                                                            <li style="font-weight: bold;"><i class="icon-heart2"></i>5/5</li>
 								
 								<li><a href="https://www.randblab.com/restaurants-bars/25-degrees-singapore/">Read More<i class="icon-arrow-right22"></i></a></li>
 							</ul>
@@ -306,7 +306,7 @@ if($_SESSION['username'] == "") {
 			</div>
 		</div>
 	</div>
-	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/tam2.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
